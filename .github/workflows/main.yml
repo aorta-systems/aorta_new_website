@@ -1,17 +1,14 @@
 name: CI-pipeline-deploy-to-aorta-website
-env: 
-  EB_PACKAGE_S3_BUCKET_NAME : "aleksei-new-site",
-  EB_APPLICATION_NAME       : "new site",
-  EB_ENVIRONMENT_NAME       : "new-site-env",
-  DEPLOY_PACKAGE_NAME       : "site_${{ github.sha }}.zip",
-  AWS_REGION_NAME           : "us-west-2"
+env:  
+      EB_PACKAGE_S3_BUCKET_NAME : "aleksei-new-site"
+      EB_APPLICATION_NAME       : "new site"
+      EB_ENVIRONMENT_NAME       : "new-site-env"
+      DEPLOY_PACKAGE_NAME       : "site_${{ github.sha }}.zip"
+      AWS_REGION_NAME           : "us-west-2"
   
 on:
   push:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    branches: - master
 
 jobs:
   build:
