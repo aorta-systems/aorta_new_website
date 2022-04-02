@@ -1,43 +1,9 @@
 {
-  "name": "angular-github-actions-amazon-s3",
-  "version": "1.0.0",
-  "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
-  "license": "MIT",
+  "name": "Elastic-Beanstalk-Sample-App",
+  "version": "0.0.1",
   "private": true,
+  "dependencies": {},
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:prod": "ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
-  },
-  "dependencies": {
-    "@angular/animations": "~13.1.3",
-    "@angular/common": "~13.1.3",
-    "@angular/compiler": "~13.1.3",
-    "@angular/core": "~13.1.3",
-    "@angular/forms": "~13.1.3",
-    "@angular/platform-browser": "~13.1.3",
-    "@angular/platform-browser-dynamic": "~13.1.3",
-    "@angular/router": "~13.1.3",
-    "rxjs": "~7.5.2",
-    "tslib": "^2.3.1",
-    "zone.js": "~0.11.4"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.4",
-    "@angular/cli": "~13.1.4",
-    "@angular/compiler-cli": "~13.1.3",
-    "@types/jasmine": "~3.10.3",
-    "@types/node": "^14.18.9",
-    "jasmine-core": "~4.0.0",
-    "karma": "~6.3.12",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.1.0",
-    "karma-jasmine": "~4.0.1",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.5.5"
+    "start": "node app.js"
   }
 }
