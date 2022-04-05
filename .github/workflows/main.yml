@@ -45,8 +45,12 @@ jobs:
         run: |
           npm run build -- --prod
 
+      - name: copy app.js to dist
+        run: |
+          cp "./app.js" "./dist/aorta_new_website/"
+
       - name: create zip
-        run : zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *.git*
+        run : zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./dist/aorta_new_website/ -x *.git*
         
       - name: cred to aws
         uses: aws-actions/configure-aws-credentials@v1
