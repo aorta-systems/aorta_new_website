@@ -1,7 +1,7 @@
 var port = process.env.PORT || 3000,
     http = require('http'),
     fs = require('fs'),
-    html = fs.readFileSync('index.html');
+    html = fs.readFileSync('./dist/aorta_new_website/index.html');
 
 var log = function(entry) {
     fs.appendFileSync('/tmp/sample-app.log', new Date().toISOString() + ' - ' + entry + '\n');
