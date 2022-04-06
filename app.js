@@ -41,12 +41,12 @@ var port = process.env.PORT || 3000,
 
 
 var server = http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': req.url.endsWith('html') && req.url !== '/' ? 'text/html' : 'application/javascript'});
-
     if (req.url === '/') {
+        res.writeHead(200);
         res.write(html);
         res.end();
     } else {
+        res.writeHead(200, {'Content-Type': req.url.endsWith('html') || req.url === '/' ? 'text/html' : 'application/javascript'});
         fs.readFile(path.join(__dirname, req.url), function (err,data){
             if (err) {
               res.writeHead(404);
