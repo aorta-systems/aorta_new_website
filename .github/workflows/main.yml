@@ -50,13 +50,14 @@ jobs:
           cp "./app.js" "./dist/aorta_new_website/"
 
       - name: Switch to Release Folder
+        working-directory: dist/aorta_new_website
         run: |
-          cd dist/aorta_new_website
           ls -la
 
       - name: create zip
-        run : zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./dist/aorta_new_website/ -x *.git*
-        
+        run : zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *.git*
+        working-directory: dist/aorta_new_website
+
       - name: cred to aws
         uses: aws-actions/configure-aws-credentials@v1
         with:
