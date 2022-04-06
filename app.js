@@ -46,13 +46,16 @@ var server = http.createServer(function (req, res) {
         res.write(html);
         res.end();
     } else if (req.url.endsWith('.js')) {
-        res.writeHead(200, {'Content-Type': 'application/javascript'});
+
+        // html = fs.readFileSync('index.html');
         fs.readFile(path.join(__dirname, req.url), function (err,data){
             if (err) {
               res.writeHead(404);
               res.end(JSON.stringify(err));
               return;
             }
+            res.writeHead(200);
+            res.setHeader("Content-Type", "application/javascript");
             res.end(data);
         });
     }
