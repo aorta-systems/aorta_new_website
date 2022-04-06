@@ -1,8 +1,8 @@
-var port = process.env.PORT || 3000,
-    http = require('http'),
-    fs = require('fs'),
-    html = fs.readFileSync('index.html');
-
+var port = process.env.PORT || 3000;
+var http = require('http');
+var fs = require('fs');
+var html = fs.readFileSync('index.html');
+var path = require('path');
     // function sendFile(filename, contentType, callback) {
     //     fs.readFile(filename, function(error, data) {
     //         if (error) {
