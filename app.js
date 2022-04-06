@@ -45,8 +45,8 @@ var server = http.createServer(function (req, res) {
         res.writeHead(200);
         res.write(html);
         res.end();
-    } else {
-        res.writeHead(200, {'Content-Type': req.url.endsWith('html') || req.url === '/' ? 'text/html' : 'application/javascript'});
+    } else if (req.url.endsWith('.js')) {
+        res.writeHead(200, {'Content-Type': 'application/javascript'});
         fs.readFile(path.join(__dirname, req.url), function (err,data){
             if (err) {
               res.writeHead(404);
@@ -54,7 +54,7 @@ var server = http.createServer(function (req, res) {
               return;
             }
             res.end(data);
-          });
+        });
     }
     // fs.readFile(path.join(__dirname, req.url), function (err,data){
     //     // if (err) {
