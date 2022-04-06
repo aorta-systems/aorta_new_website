@@ -41,7 +41,8 @@ var port = process.env.PORT || 3000,
 
 
 var server = http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': req.url.endsWith('html') ? 'text/html' : 'application/javascript'});    
+    res.writeHead(200, {'Content-Type': req.url.endsWith('html') && req.url !== '/' ? 'text/html' : 'application/javascript'});
+
     if (req.url === '/') {
         res.write(html);
         res.end();
