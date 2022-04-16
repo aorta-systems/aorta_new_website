@@ -1,0 +1,173 @@
+:host {
+    display: flex;
+    flex-flow: column;
+}
+.welcome-screen {
+    position: relative;
+    background-image: url('/assets/images/homeScreen.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    min-height: calc(100vh - 86px);
+}
+
+.welcome-content {
+    width: 100%;
+}
+
+.header-text-section {
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.header-welcome-text {
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.content-welcome-text {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.header-welcome-content {
+    right: 5em;
+    position: absolute;
+    top: 20%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.salesforce-logo {
+    position:absolute;
+    right: 3em;
+    top: 3em;
+    padding-left: 3em;
+    height: 100px;
+}
+
+.contact-us-btn {
+    position: absolute;
+    bottom: 0%;
+    font-weight: 500;
+    padding: 4em;
+}
+
+/* BUTTON GET A GUOTE */
+
+.btn {		
+	position: relative;	
+  white-space: nowrap;
+	width: 300px;
+	max-width: 300px;
+	padding: 1.4rem 4.2rem;
+	padding-right: 3.1rem;
+	font-size: 1.4rem;
+	color: #fff;
+	letter-spacing: 1.1rem;
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+    top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.btn:before {
+	right: 0;
+	border: 1px solid #fff;
+	border-left: 0;
+	border-right: 0;	
+}
+
+.btn:after {
+	left: 0;
+}
+
+.btn:hover {
+	color: #96B7C4;
+	transition-delay: .5s;
+    z-index: 1;
+}
+
+.btn:hover:before {
+	transition-delay: 0s;
+    width: 100%;
+}
+
+.btn:hover:after {
+    background-color: #fff;
+	  transition-delay: .35s;
+    z-index: -1;
+    color: #000;
+    width: 100%;
+}
+
+
+/* MAIN TEXT */
+
+.text-animation {
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    opacity: 1;
+  }
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .text-animation span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  .text-animation span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(5) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(6) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(7) {
+    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .text-animation span:nth-child(8) {
+    animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
