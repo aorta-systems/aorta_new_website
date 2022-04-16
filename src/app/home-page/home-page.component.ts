@@ -13,15 +13,16 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {}
 
   onVisible(element: HTMLElement) {
-    element.classList.add("text-animation");
+    console.log('onVisible')
+    if (!element.classList.contains("active")) {
+      element.classList.add("active");
+    }
   }
 
   onInVisible(element: HTMLElement) {
-    element.classList.remove("text-animation");
+    console.log('INVisible')
+    element.classList.remove("active");
   }
 
-  handleIntersect(a: any, b: any) {
-
-  }
 
 }
