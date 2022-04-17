@@ -9,6 +9,12 @@ import { ClientsPageComponent } from './clients-page/clients-page.component';
 import { SolutionsPageComponent } from './solutions-page/solutions-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ObserveVisibilityDirective } from './observe-visibility.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,12 @@ import { ObserveVisibilityDirective } from './observe-visibility.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

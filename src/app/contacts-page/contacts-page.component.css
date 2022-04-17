@@ -5,11 +5,11 @@
     font-family: inherit;
     display: flex;
     justify-content: center;
+    padding: 2rem;
 }
 section {
     max-width: 1170px;
     width: 100%;
-    padding-top: 3em;
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -32,6 +32,10 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em; */
+}
+
+mat-form-field {
+    width: 100%;
 }
 
 .blue-card {
