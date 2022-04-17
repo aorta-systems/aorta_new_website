@@ -16,15 +16,19 @@
 
 .text-slide {
     opacity: 0;
-    animation: slidetop 1s ease-out forwards;
+    animation: slidetop 0.8s ease-out forwards;
 }
 
   @keyframes slidetop {
-    from {
+    0% {
        opacity:0;
        transform: translateY(-300%);
     }
-    to {
+    70% {
+      opacity:0;
+      transform: translateY(-150%);
+   }
+    100% {
        opacity:1;
        transform: translateY(0);
     }
@@ -34,8 +38,8 @@
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     opacity: 1;
-    height: 140px;
-    width: 140px;
+    height: 160px;
+    width: 160px;
     object-fit:  contain;
     filter: blur(4px);
   }
