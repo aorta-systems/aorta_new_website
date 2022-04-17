@@ -23,19 +23,16 @@ img.client-logo {
 .text-slide {
     opacity: 0;
     animation: slidetop 1s ease-out forwards;
-    
 }
 
 @keyframes slidetop {
     from {
        opacity:0;
        transform: translateY(-300%);
-       /* margin-left:-800px;  */
     }
     to {
        opacity:1;
        transform: translateY(0);
-       /* margin-left:0px;  */
     }
   } 
 
