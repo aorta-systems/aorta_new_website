@@ -3,46 +3,10 @@
         <span>Clents and Partners</span>
     </div>
     <div class="container">
-        <img height="140" width="140" src="assets/images/clients/AuthenticID_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/billforward.png" class="client-logo">
-        <img height="140" src="assets/images/clients/bpmonline_logo1.png" class="client-logo">
-        <img height="140" src="assets/images/clients/cerebras-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/ceros_logo.jpg" class="client-logo">
-        <img height="140" src="assets/images/clients/Cider1.png" class="client-logo">
-        <img height="140" src="assets/images/clients/cloud-alliance-partner-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/cloudera-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/confluent-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/coreos_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/ct_logo_blue.png" class="client-logo">
-        <img height="140" src="assets/images/clients/docker_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/foxt_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/front-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/greatwater1.png" class="client-logo">
-        <img height="140" src="assets/images/clients/hortonworks_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/joor_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/marchex-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/masterdata_logo.jpg" class="client-logo">
-        <img height="140" src="assets/images/clients/Mattermost-logo.png" class="client-logo"> 
-        <img height="140" src="assets/images/clients/meet-elise1.png" class="client-logo">
-        <img height="140" src="assets/images/clients/mirantis.png" class="client-logo">
-        <img height="140" src="assets/images/clients/newsela_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/panda_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/pnp_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/people-ai.png" class="client-logo">
-        <img height="140" src="assets/images/clients/redhat_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/ringlead_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/room1.png" class="client-logo">
-        <img height="140" src="assets/images/clients/salt_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/scylladb-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/seismic-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/semantria_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/shujinko_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/sonder_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/soul-machines.png" class="client-logo">
-        <img height="140" src="assets/images/clients/stonehendge.png" class="client-logo">
-        <img height="140" src="assets/images/clients/docker_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/tipalti_logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/unravel-logo.png" class="client-logo">
-        <img height="140" src="assets/images/clients/upflow_logo.png" class="client-logo">
+        <img *ngFor="let client of clients" 
+            class="client-logo"
+            [src]="client.src" 
+            [style.animation]="client.animation"
+        >
     </div>
 </section>
