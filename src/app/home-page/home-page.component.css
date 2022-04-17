@@ -54,6 +54,7 @@ section.one-column {
 }
 
 .header-welcome-text {
+    padding: 2rem;
     font-size: 4em;
     font-weight: 600;
 }

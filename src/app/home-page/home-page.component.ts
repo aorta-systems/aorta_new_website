@@ -13,14 +13,12 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {}
 
   onVisible(element: HTMLElement) {
-    console.log('onVisible')
     if (!element.classList.contains("active")) {
       element.classList.add("active");
     }
   }
 
   onInVisible(element: HTMLElement) {
-    console.log('INVisible')
     element.classList.remove("active");
   }
 

@@ -1,17 +1,28 @@
 <section>
     <div class="blue-card">
-        <div class="small-header-text">Office Address</div>
-        <div>Address: 29 Berwick Rd, Hewlett, NY 11557, United States</div>      
-        
-        <div class="small-header-text">Email Address</div>
-        <div>info@aortasystems.com</div>
+      <mat-grid-list cols="6" rowHeight="60px">
+        <mat-grid-tile colspan="6" class="small-header-text">
+          <div class="text-align-left">Office Address </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1"><mat-icon matSuffix>location_on</mat-icon></mat-grid-tile>
+        <mat-grid-tile colspan="5"><div class="text-align-left">Address: 29 Berwick Rd, Hewlett, NY 11557, United States</div></mat-grid-tile>
 
-        <div class="small-header-text">Phone Numbers</div>
-        <div>+1(855) 327-0001</div>
+        <mat-grid-tile colspan="6" class="small-header-text">
+          <div class="text-align-left">Email Address</div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1"><mat-icon matSuffix>email</mat-icon></mat-grid-tile>
+        <mat-grid-tile colspan="5"><div class="text-align-left">info@aortasystems.com</div></mat-grid-tile>
+        
+        <mat-grid-tile colspan="6" class="small-header-text">
+          <div class="text-align-left">Phone Numbers</div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1"><mat-icon matSuffix>phone</mat-icon></mat-grid-tile>
+        <mat-grid-tile colspan="5"><div class="text-align-left">+1(855) 327-0001</div></mat-grid-tile>
+      </mat-grid-list>
     </div>
     
     <div class="card">
-        <div>CONTACT US</div>
+        <div class="medium-header-text text-align-middle">CONTACT US</div>
         <div>
           We are always open to any of your questions. 
           If you want to contact us, fill out the form below, please. 
@@ -39,8 +50,8 @@
               <textarea matInput placeholder="Enter message" rows="7"></textarea>
             </mat-form-field>
           </p>
-          <p>
-            <button mat-button>sdadasdasds</button>
+          <p class="text-align-middle small-header-text">
+            <button mat-stroked-button color="primary" style="padding: 3px 35px;">Send</button>
           </p>
         </div>
 

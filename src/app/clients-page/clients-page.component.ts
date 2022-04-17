@@ -12,4 +12,14 @@ export class ClientsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onVisible(element: HTMLElement) {
+    if (!element.classList.contains("active")) {
+      element.classList.add("active");
+    }
+  }
+
+  onInVisible(element: HTMLElement) {
+    element.classList.remove("active");
+  }
+
 }
