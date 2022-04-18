@@ -1,5 +1,13 @@
+:host {
+  display: flex;
+  flex-flow: column;
+}
+
 .content {
     padding: 2em;
+    max-width: 1170px;
+    width: 100%;
+    align-self: center;
 }
 
 .header-section {
