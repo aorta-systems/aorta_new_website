@@ -38,7 +38,7 @@
 <section class="two-columns"
         >
     <div class="slideright" observeVisibility
-    [debounceTime]="700"
+    [debounceTime]="200"
     (visible)="onVisible($event)"
     (invisible)="onInVisible($event)">
         <div class="header-text text-align-middle"
@@ -57,7 +57,7 @@
     <div class="text-align-middle slideleft"
          style="align-self: center;"
          observeVisibility
-         [debounceTime]="700"
+         [debounceTime]="200"
          (visible)="onVisible($event)"
          (invisible)="onInVisible($event)">
         <img height="140" src="assets/images/logo_aorta.png" style="object-fit: cover;">

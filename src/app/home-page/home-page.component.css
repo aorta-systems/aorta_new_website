@@ -241,18 +241,18 @@ section.one-column {
 
  .slideleft {
     opacity: 0;
-    animation: fade-out-left .4s ease forwards;
+    animation: fade-out-left .3s ease forwards;
   }
   
  .slideright {
   opacity: 0;
-  animation: fade-out-right .4s ease forwards;
+  animation: fade-out-right .3s ease forwards;
 }
   .active .slideright, .slideright.active {
-    animation: slideright .4s ease forwards;
+    animation: slideright .3s ease forwards;
   }
   .active .slideleft, .slideleft.active {
-    animation: slideleft .4s ease forwards;
+    animation: slideleft .3s ease forwards;
   }
 
   @keyframes fade-out-right {
