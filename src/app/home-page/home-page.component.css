@@ -1,6 +1,8 @@
 :host {
     display: flex;
     flex-flow: column;
+    font-size: 1.2em;
+    line-height: 1.4em;
 }
 
 section.two-columns {
@@ -64,7 +66,7 @@ section.one-column {
 }
 
 .header-text {
-    font-size: 2.5rem;
+    font-size: 2em;
     padding: 1.5rem;
     font-weight: 400;
     color: #353c4a;
