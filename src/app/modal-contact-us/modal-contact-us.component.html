@@ -1,0 +1,33 @@
+<h2 mat-dialog-title class="text-align-middle">
+  <p>Please fill out the form below</p>
+  <p>and our specialist will contact you soon</p>
+</h2>
+<mat-dialog-content>
+  <div class="content">
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Your Name</mat-label>
+        <input matInput placeholder="">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Email address</mat-label>
+        <input matInput placeholder="">
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-hint>We'll never share your email with anyone else.</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label >Your message</mat-label>
+        <textarea matInput placeholder="Enter message" rows="7"></textarea>
+      </mat-form-field>
+    </p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="true" class="send-button" cdkFocusInitial>SEND</button>
+</mat-dialog-actions>

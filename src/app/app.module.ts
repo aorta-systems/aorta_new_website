@@ -13,9 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { MatGridListModule } from '@angular/material/grid-list';
-
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     SolutionsPageComponent,
     HomePageComponent,
     ObserveVisibilityDirective,
+    ModalContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +36,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    MatGridListModule
+    MatDialogModule 
   ],
+  entryComponents:[MatDialogModule],
   providers: [],
   bootstrap: [AppComponent]
 })

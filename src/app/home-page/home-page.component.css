@@ -98,11 +98,22 @@ section.one-column {
 .contact-us-btn {
     position: absolute;
     bottom: 0%;
-    font-weight: 500;
     padding: 4em;
 }
 
-/* BUTTON GET A GUOTE */
+.btn {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 15px 30px;
+  opacity: 0;
+  font-weight: 300;
+  animation: slideright .5s ease-out forwards;
+  transition-duration: .3s;
+}
+
+
+
+/* BUTTON GET A GUOTE
 .btn {		
 	position: relative;	
   white-space: nowrap;
@@ -156,7 +167,7 @@ section.one-column {
     z-index: -1;
     color: #000;
     width: 100%;
-}
+} */
 
 
 /* TEXT ANIMATION*/
@@ -228,37 +239,63 @@ section.one-column {
     }
   }
 
-  .slideright, .slideleft {
+ .slideleft {
     opacity: 0;
+    animation: fade-out-left .4s ease forwards;
   }
+  
+ .slideright {
+  opacity: 0;
+  animation: fade-out-right .4s ease forwards;
+}
   .active .slideright, .slideright.active {
-    animation: slideright 0.8s ease-out forwards;
+    animation: slideright .4s ease forwards;
   }
   .active .slideleft, .slideleft.active {
-    animation: slideleft 0.8s ease-out forwards;
+    animation: slideleft .4s ease forwards;
   }
-  @keyframes slideright {
-    from {
-       opacity:0;
-       transform: translateX(-100%);
-       /* margin-left:-800px;  */
+
+  @keyframes fade-out-right {
+    0% {
+       opacity:1;
+       transform: translateX(0px);
     }
-    to {
+    100% {
+       opacity:0;
+       transform: translateX(-100px);
+    }
+  } 
+
+  @keyframes fade-out-left {
+    0% {
+       opacity:1;
+       transform: translateX(0px);
+    }
+    100% {
+       opacity:0;
+       transform: translateX(100px);
+    }
+  } 
+
+
+  @keyframes slideright {
+    0% {
+       opacity:0;
+       transform: translateX(-100px);
+    }
+    100% {
        opacity:1;
        transform: translateX(0);
-       /* margin-left:0px;  */
     }
   } 
   @keyframes slideleft {
     from {
        opacity:0;
-       transform: translateX(100%);
-       /* margin-right:-800px;  */
+       transform: translateX(100px);
     }
     to {
        opacity:1;
        transform: translateX(0);
-       /* margin-right:0px;  */
     }
   }
 

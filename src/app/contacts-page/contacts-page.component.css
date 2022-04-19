@@ -41,9 +41,9 @@ mat-form-field {
 .blue-card {
     background-color: #15abe7;
     padding: 1.5em;
-    line-height: 1.8;
     color: #fff;
     font-size: 1.2em;
+    display: grid;
 }
 
 .text-align-left {
