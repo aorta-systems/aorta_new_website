@@ -33,10 +33,19 @@
 
 <section class="content">
     <div class="container">
-        <a *ngFor="let client of clients" [href]="client.url" >
-            <img class="client-logo"
-            [src]="client.src" 
-            [style.animation]="client.animation">
-        </a>
+        <div *ngFor="let client of clients" class="client-logo" >
+            <div>
+                <a [href]="client.url">
+                    <img [src]="client.srcMono" 
+                         [style.animation]="client.animation">
+                </a>
+            </div>
+            <div class="overlay">
+                <a [href]="client.url">
+                    <img [src]="client.src" 
+                         [style.animation]="client.animation">
+                </a>
+            </div>
+        </div>
     </div>
 </section>
