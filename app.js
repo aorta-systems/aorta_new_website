@@ -12,7 +12,6 @@ var server = http.createServer(function (request, response) {
 
     var extname = String(path.extname(filePath)).toLowerCase();
     var mimeTypes = {
-        '.html': 'text/html',
         '.js': 'text/javascript',
         '.css': 'text/css',
         '.json': 'application/json',
@@ -29,7 +28,11 @@ var server = http.createServer(function (request, response) {
         '.wasm': 'application/wasm'
     };
 
-    var contentType = mimeTypes[extname] || 'application/octet-stream';
+    var contentType = mimeTypes[extname] || undefined;
+
+    if (contentType === undefined) {
+        filePath = './index.html'
+    }
 
     fs.readFile(filePath, function(error, content) {
         if (error) {

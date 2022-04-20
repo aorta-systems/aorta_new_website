@@ -9,26 +9,6 @@ export class ClientsPageComponent implements OnInit {
 
   clients = [
     {
-      src      : "assets/images/clients/AuthenticID_logo.png",
-      animation: "fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0)",
-      url      : "https://authenticid.co/"
-    },{
-      src      : "assets/images/clients/billforward.png",
-      animation: "fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0)",
-      url      : "https://www.billforward.net/"
-    },{
-      src      : "assets/images/clients/bpmonline_logo1.png",
-      animation: "fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0)",
-      url      : "http://www.bpmonline.com/"
-    },{
-      src      : "assets/images/clients/cerebras-logo.png",
-      animation: "fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0)",
-      url      : "https://www.cerebras.net/"
-    },{
-      src      : "assets/images/clients/ceros_logo.jpg",
-      animation: "fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0)",
-      url      : "https://coreos.com/"
-    },{
       src      : "assets/images/clients/Cider1.png",
       animation: "fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0)",
       url      : "https://getcider.com/"
@@ -168,6 +148,26 @@ export class ClientsPageComponent implements OnInit {
       src      : "assets/images/clients/upflow_logo.png",
       animation: "fade-in 0.8s 4.0s forwards cubic-bezier(0.11, 0, 0.5, 0)",
       url      : "https://upflow.io/en/"
+    },{
+      src      : "assets/images/clients/AuthenticID_logo.png",
+      animation: "fade-in 0.8s 4.1s forwards cubic-bezier(0.11, 0, 0.5, 0)",
+      url      : "https://authenticid.co/"
+    },{
+      src      : "assets/images/clients/billforward.png",
+      animation: "fade-in 0.8s 4.2s forwards cubic-bezier(0.11, 0, 0.5, 0)",
+      url      : "https://www.billforward.net/"
+    },{
+      src      : "assets/images/clients/bpmonline_logo1.png",
+      animation: "fade-in 0.8s 4.3s forwards cubic-bezier(0.11, 0, 0.5, 0)",
+      url      : "http://www.bpmonline.com/"
+    },{
+      src      : "assets/images/clients/cerebras-logo.png",
+      animation: "fade-in 0.8s 4.4s forwards cubic-bezier(0.11, 0, 0.5, 0)",
+      url      : "https://www.cerebras.net/"
+    },{
+      src      : "assets/images/clients/ceros_logo.jpg",
+      animation: "fade-in 0.8s 4.5s forwards cubic-bezier(0.11, 0, 0.5, 0)",
+      url      : "https://coreos.com/"
     }
   ]
   
