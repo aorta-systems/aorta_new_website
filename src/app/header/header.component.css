@@ -1,8 +1,8 @@
 :host {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     height: 70px;
-    font-size: 1.2em;
-    font-weight: inherit;
+    font-size: 24px;
+    font-weight: 400;
     font-family: inherit;
     display: flex;
     justify-content: center;
@@ -26,7 +26,6 @@ nav.header-menu {
 }
 nav.header-menu ul {
     display: flex;
-    color: #5e677f; 
     list-style: none;
     justify-content: center;
     padding: 0;
@@ -37,7 +36,7 @@ li {
 }
 a {
     cursor: pointer;
-    color: #5e677f;
+    color: #fff;
     text-decoration: none !important;
     transition: .3s linear;
 }

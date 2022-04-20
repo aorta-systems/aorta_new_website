@@ -1,4 +1,109 @@
-<section>
+<section class="contact-page-header">
+  <app-header></app-header>
+  <div class="header-section">
+      <div class="header-text header-text-animation">
+          GET IN TOUCH
+      </div>
+      <div class="under-header-text text-animation">
+        <!-- <div>
+          <mat-icon matSuffix>location_on</mat-icon>
+          <span>29 Berwick Rd, Hewlett, NY 11557, United States</span>
+        </div> -->
+
+        <div>
+          <mat-icon matSuffix>email</mat-icon>
+          <a href="mailto:info@aortasystems.com" class="contact-links">info@aortasystems.com</a>
+        </div>
+
+        <div>
+          <mat-icon matSuffix>phone</mat-icon>
+          <a href="tel:+1(855) 327-0001" class="contact-links">+1(855) 327-0001</a>
+        </div>
+        <!-- Hey! we are looking forward to start project with you -->
+      </div>
+      <!-- <div class="under-header-text text-animation"
+           observeVisibility
+           [debounceTime]="300"
+           (visible)="onVisible($event)"
+           (invisible)="onInVisible($event)">
+          <span>Something about our clients.... </span>
+          <span>Example: Design on Edge represent </span>
+          <span>a wide range o</span>
+          <span>f indusctries includeng </span>
+          <span>hospitality, property nama</span>
+          <span>gement, companies, sta</span>
+      </div> -->
+  </div>
+
+  <div class="social-medial-links"
+       observeVisibility
+       [debounceTime]="500"
+       (visible)="onVisible($event)"
+       (invisible)="onInVisible($event)">
+    <a href="https://www.facebook.com/AortaSystems">
+      <img src="assets/images/social/facebook.png" height="50">
+    </a>
+    <a href="https://www.linkedin.com/company/aorta-systems-group">
+      <img src="assets/images/social/linkedin.png" height="50">
+    </a>
+    <a href="https://twitter.com/AortaSystems">
+      <img src="assets/images/social/twitter.png" height="50">
+    </a>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <div class="info-text">
+      <div>
+        We appreciate your interest in AortaSystems. Fill the form so that we could have a primary insight of your case or just let us know what you think.
+        We provide quick replies the same business day.
+      </div>
+      <div class="address-info">
+        <span><strong>Office in USA:</strong></span>
+        <address>29 Berwick Rd, Hewlett, NY 11557, United States</address>
+      </div>
+    </div>
+    <div>
+      <div>
+        We are always open to any of your questions. 
+        If you want to contact us, fill out the form below, please. 
+        We will put your question under immediate review and get back to you as soon as possible.
+      </div>
+      <div>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Your Name</mat-label>
+            <input matInput placeholder="">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Email address</mat-label>
+            <input matInput placeholder="">
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-hint>We'll never share your email with anyone else.</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label >Your message</mat-label>
+            <textarea matInput placeholder="Enter message" rows="7"></textarea>
+          </mat-form-field>
+        </p>
+        <p class="text-align-middle">
+          <button mat-stroked-button color="primary" class="button-style">Send</button>
+        </p>
+      </div>
+    </div>
+    <div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- <section>
     <div class="blue-card">
       <div class="small-header-text">Office Address</div>
       <div>
@@ -55,4 +160,4 @@
 
        
     </div>
-</section>
+</section> -->

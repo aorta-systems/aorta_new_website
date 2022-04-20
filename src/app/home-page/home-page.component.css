@@ -1,8 +1,6 @@
 :host {
     display: flex;
     flex-flow: column;
-    font-size: 1.2em;
-    line-height: 1.4em;
 }
 
 section.two-columns {
@@ -43,7 +41,7 @@ section.one-column {
     background-image: url('/assets/images/homeScreen.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
-    min-height: calc(100vh - 86px);
+    min-height: calc(100vh - 16px);
 }
 
 .header-text-section {
