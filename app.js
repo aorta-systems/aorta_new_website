@@ -30,8 +30,9 @@ var server = http.createServer(function (request, response) {
 
     var contentType = mimeTypes[extname] || undefined;
 
-    if (contentType === undefined) {
-        filePath = './index.html'
+    if (contentType == undefined) {
+        filePath = './index.html';
+        contentType = 'text/html';
     }
 
     fs.readFile(filePath, function(error, content) {
