@@ -34,7 +34,7 @@
 <section class="content">
     <div class="container">
         <div *ngFor="let client of clients" class="client-logo" >
-            <div>
+            <div class="mono-logo">
                 <a [href]="client.url">
                     <img [src]="client.srcMono" 
                          [style.animation]="client.animation">
