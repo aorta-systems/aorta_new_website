@@ -1,8 +1,8 @@
 <section class="welcome-screen">
     <app-header></app-header>
-    <div class="">
-        <img class="salesforce-logo" 
-            src="assets/images/salesforce-logo.svg">
+    <div class="" style="color: #f5f6fa;">
+        <!-- <img class="salesforce-logo" 
+            src="assets/images/salesforce-logo.svg"> -->
 
         <div class="header-welcome-content">
             <div class="header-text-section text-animation" 
@@ -10,63 +10,334 @@
             [debounceTime]="200"
             (visible)="onVisible($event)"
             (invisible)="onInVisible($event)">
-                <div class="header-welcome-text"><span>Salesforce De</span><span>velopment</span></div>
-                <div class="content-welcome-text">
-                    <span>Off</span>
-                    <span>shore fo</span>
-                    <span>r  Salesf</span>
-                    <span>force IS</span>
-                    <span>V and Sales</span>
-                    <span>force consul</span>
-                    <span>ting part</span>     
-                    <span>ners</span>   
+                <div class="header-welcome-text">
+                    <span>All-</span>
+                    <span>inclu</span>
+                    <span>sive&nbsp;</span>
+                    <span>Sales</span>
+                    <span>force&nbsp;</span>
+                    <span>serv</span>
+                    <span>ices</span>  
+                </div>
+                <div class="content-welcome-text"  style="color: #f5f6fa; font-weight: 700;  font-size: 2em;">
+                    <span>Salesforce &nbsp;</span>
+                    <span>Trusted&nbsp;</span>
+                    <span>Experts,&nbsp;</span>
+                    <span>Implementation&nbsp;</span>
+                    <span>&&nbsp;</span>
+                    <span>Consulting&nbsp;</span>
+                    <span>Partners</span>   
                 </div>  
             </div>
         </div>
 
         <div class="contact-us-btn">
-            <button mat-button (click)="openDialog()" class="btn" >CONTACT US</button>
-            <!-- <div class="btn text-animation" 
+            <button mat-button (click)="handleClickContactUsBtn()" class="btn">CONTACT US</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- <section style="background-color: #f5f6fa ; color: black;">
+    <div class="about-company-content">
+        <div>
+            <div class="slideright header-text text-align-middle" 
+                observeVisibility
+                [debounceTime]="300"
+                (visible)="onVisible($event)"
+                (invisible)="onInVisible($event)">
+                ABOUT COMPANY
+            </div>
+            
+            <div class="slideright default-text" 
+                observeVisibility
+                [debounceTime]="300"
+                (visible)="onVisible($event)"
+                (invisible)="onInVisible($event)">
+                Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
+                development and various Salesforce consulting services from implementation, 
+                customization and administration to automation, development, enhancements and 
+                integrations. We have a very highly skilled and experienced team – certified 
+                Salesforce.com consultants, developers, administrators, QA experts, project managers 
+                & business analysts, all of whom are constantly supported by our Salesforce Architects. 
+                <br>
+                <br>    
+                Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
+                development and PMBA centers are also located in San Francisco, Utah, Toronto, and 
+                across Eastern Europe. The unique combination of the company’s multi-year CRM 
+                engineering experience in conjunction with solid SaaS operations and management 
+                skills enables innovation and a wealth of ideas that helps make our clients more 
+                effective and productive. At Aorta Systems, the most valuable asset we have is the 
+                relationship we hold within our team and customers.  
+            </div>
+        </div>
+        <div class="text-align-middle slideleft"
+                style="align-self: center;"
                 observeVisibility
                 [debounceTime]="200"
                 (visible)="onVisible($event)"
                 (invisible)="onInVisible($event)">
-                <span>CON</span><span>TAC</span><span>T US</span>
-            </div> -->
+       <img height="140" src="assets/images/logo_aorta.png" style="object-fit: cover;">
+   </div>
+    </div>
+</section> -->
+
+
+
+<!-- <section style="background-color: #f5f6fa ;">
+    <div class="about-company-content">
+        <div class="slideright" observeVisibility
+        [debounceTime]="200"
+        (visible)="onVisible($event)"
+        (invisible)="onInVisible($event)">
+            <div class="header-text text-align-middle"
+                 >ABOUT COMPANY</div>
+            <div class="default-text">
+                Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
+                development and various Salesforce consulting services from implementation, 
+                customization and administration to automation, development, enhancements and 
+                integrations. We have a very highly skilled and experienced team – certified 
+                Salesforce.com consultants, developers, administrators, QA experts, project managers 
+                & business analysts, all of whom are constantly supported by our Salesforce Architects. 
+                <br>
+                <br>    
+                Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
+                development and PMBA centers are also located in San Francisco, Utah, Toronto, and 
+                across Eastern Europe. The unique combination of the company’s multi-year CRM 
+                engineering experience in conjunction with solid SaaS operations and management 
+                skills enables innovation and a wealth of ideas that helps make our clients more 
+                effective and productive. At Aorta Systems, the most valuable asset we have is the 
+                relationship we hold within our team and customers.  
+            </div>
+        </div>
+    
+        <div class="text-align-middle slideleft"
+             style="align-self: center;"
+             observeVisibility
+             [debounceTime]="200"
+             (visible)="onVisible($event)"
+             (invisible)="onInVisible($event)">
+            <img height="140" src="assets/images/logo_aorta.png" style="object-fit: cover;">
         </div>
     </div>
+</section> -->
+
+
+<section style="
+    background-color: #ca2026;
+    background-color: #f6f6f6;
+    color: black; 
+    padding: 2em;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 2em;"
+>    <div style="
+        min-height:700px; 
+        display: flex;  
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        padding: 6em 2em;
+         position: relative; "
+    >
+        <div class="slideright text-align-middle" style="
+                font-size: 2.5em;
+                padding: 1.5rem;
+                color: #353c4a;
+                align-self: center;"
+                observeVisibility
+                [debounceTime]="300"
+                (visible)="onVisible($event)"
+                (invisible)="onInVisible($event)">ABOUT COMPANY</div>
+            <div class="slideright" style=" 
+            font-size: 1.4em;
+            font-weight: 200;
+            line-height: 1.2em;
+            color: #353c4a;
+            text-align: justify;"
+            observeVisibility
+            [debounceTime]="300"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
+            development and various Salesforce consulting services from implementation, 
+            customization and administration to automation, development, enhancements and 
+            integrations. We have a very highly skilled and experienced team – certified 
+            Salesforce.com consultants, developers, administrators, QA experts, project managers 
+            & business analysts, all of whom are constantly supported by our Salesforce Architects. 
+            <br>
+            <br>    
+            Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
+            development and PMBA centers are also located in San Francisco, Utah, Toronto, and 
+            across Eastern Europe. The unique combination of the company’s multi-year CRM 
+            engineering experience in conjunction with solid SaaS operations and management 
+            skills enables innovation and a wealth of ideas that helps make our clients more 
+            effective and productive. At Aorta Systems, the most valuable asset we have is the 
+            relationship we hold within our team and customers.  
+        </div>
+
+    </div>
+
+    <div style="background-image: url('/assets/images/background_about_company.gif');
+        background-repeat: no-repeat;
+        background-size: cover; ">
+       
+    </div>
 </section>
-<section class="two-columns"
-        >
-    <div class="slideright" observeVisibility
-    [debounceTime]="200"
-    (visible)="onVisible($event)"
-    (invisible)="onInVisible($event)">
-        <div class="header-text text-align-middle"
-             >ABOUT COMPANY</div>
-        <div class="default-text">
-            Aorta Systems Group is a technology provider of customized CRM tools, services and solutions designed specifically for Healthcare, Sciences, Pharmaceuticals, Biotechnology and Medical Devices industries
-            . Aorta Systems was launched in 2013, and within just one year,
-            , it invented and turned into reality an ecosystem of revolutionary products and solutions
-            , entered into partnership agreements with a number of leading business application vendors
-            , and gained significant traction with Healthcare providers.
-            Headquartered in New York, Aorta Systems Group development and sales centers are also located in San Francisco and Toronto, Canada. The unique combination of the company’s multi-year CRM engineering experience in conjunction with solid SaaS operations and management
-            skills enables innovation and a wealth of ideas that helps make Healthcare enterprise applications world more effective and user-friendly.
+
+
+<!-- <section style="background-color: #f5f6fa ;">
+    <div class="about-company-content">
+        <div>
+            <div class="header-text text-align-middle"
+                 >ABOUT COMPANY</div>
+            <div class="default-text">
+                Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
+                development and various Salesforce consulting services from implementation, 
+                customization and administration to automation, development, enhancements and 
+                integrations. We have a very highly skilled and experienced team – certified 
+                Salesforce.com consultants, developers, administrators, QA experts, project managers 
+                & business analysts, all of whom are constantly supported by our Salesforce Architects. 
+                <br>
+                <br>    
+                Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
+                development and PMBA centers are also located in San Francisco, Utah, Toronto, and 
+                across Eastern Europe. The unique combination of the company’s multi-year CRM 
+                engineering experience in conjunction with solid SaaS operations and management 
+                skills enables innovation and a wealth of ideas that helps make our clients more 
+                effective and productive. At Aorta Systems, the most valuable asset we have is the 
+                relationship we hold within our team and customers.  
+            </div>
+        </div>
+    
+        <div style="background-image: url('/assets/images/about_company_gif.gif');
+            background-repeat: no-repeat;
+            background-size: cover; ">
         </div>
     </div>
+</section> -->
 
-    <div class="text-align-middle slideleft"
-         style="align-self: center;"
-         observeVisibility
-         [debounceTime]="200"
-         (visible)="onVisible($event)"
-         (invisible)="onInVisible($event)">
-        <img height="140" src="assets/images/logo_aorta.png" style="object-fit: cover;">
+
+<section class="" 
+         style="
+             background-color: #444444;
+             color: black; 
+             position: relative;
+             padding: 2em 4em;
+             display: grid; 
+             grid-template-columns: 1fr;">
+    <div class="slidetop" style="font-size: 3.5em; color: #f6f6f6; margin: auto; padding: 1.5em 0em;"
+            observeVisibility
+            [debounceTime]="400"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)"
+    >
+        <div>OUR TECHNOLOGIES</div>
+
+    </div>
+    <div style="color: #dddcdc88; font-weight: 700; font-size: 1.5em;">
+        <img height="65" class="animated-logo-type1" src="assets/images/technologies/net_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 50%; left: 79%; border-radius: 50%;" >
+
+        <img height="55" class="animated-logo-type2" src="assets/images/technologies/html_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 25%; left: 5%; border-radius: 50%;" >
+
+        <img height="70" class="animated-logo-type3" src="assets/images/technologies/js_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 10%; position: absolute; top: 65%; left: 15%; border-radius: 50%;" >
+
+        <img height="60" class="animated-logo-type4" src="assets/images/technologies/ios_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top: 10%; left: 25%; border-radius: 50%;" >
+
+        <img height="80" class="animated-logo-type1" src="assets/images/technologies/salesforce_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 28%; border-radius: 50%;" >
+
+        <img height="45" class="animated-logo-type2" src="assets/images/technologies/android_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 65%; border-radius: 50%;" >
+
+        <img height="55" class="animated-logo-type3" src="assets/images/technologies/css_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:28%; left: 70%; border-radius: 50%;" >
     </div>
 
 </section>
 
-<section class="one-column technologies">
+<section class="" 
+         style="
+             background-color: #444444;
+             background-image: url('/assets/images/background-technology.jpg');
+             background-repeat: no-repeat;
+             background-size: cover;
+             color: black; 
+             padding: 5em;
+             display: grid; 
+             grid-template-columns: 1fr 1fr 1fr; 
+             grid-gap: 6em;">
+
+
+
+    <div class="card"
+            observeVisibility
+            [debounceTime]="400"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+        
+         
+            <div class="card-side front"></div>
+            <div class="card-side back">
+                <div class="card-header">Web</div>
+        
+                <div class="card-content">
+                    Request elegant and functional solutions (portals, ecommerce platforms etc.). Using Ruby on Rails,
+                    AngularJS, NodeJS, ReactJS and more, we can bring into reality every idea that you’ve got!
+                </div>
+    
+                <div>
+                    <img src="assets/images/technologies/angular.svg" >
+                    <img src="assets/images/technologies/react.svg" >
+                    <img src="assets/images/technologies/heroku.svg">
+                    <img src="assets/images/technologies/java.png">
+                </div>
+    
+            </div>  
+    </div>
+        
+    <div class="card"
+        observeVisibility
+        [debounceTime]="800"
+        (visible)="onVisible($event)"
+        (invisible)="onInVisible($event)">
+
+    
+        <div class="card-side front"></div>
+        <div class="card-side back">
+            <div class="card-header">Salesforce</div>
+        
+            <div class="card-content">
+                Experience all powerful features of lead cloud enterprise platform Salesforce.com with real professionals from our company - Platinum SFDC Partner!
+            </div>
+
+            <div>
+                <img src="assets/images/technologies/salesforce.svg">
+            </div>
+
+        </div>  
+    </div>
+
+    <div class="card"
+        observeVisibility
+        [debounceTime]="1200"
+        (visible)="onVisible($event)"
+        (invisible)="onInVisible($event)">
+
+    <div class="card-side front"></div>
+    <div class="card-side back">
+        <div class="card-header">Mobile</div>
+        
+        <div class="card-content">
+            Reinforce your business with mobile solutions! By designing right architecture or mobile extension we’ll help you to manage various processes with appropriate mobile app.
+        </div>
+
+        <div>
+            <img src="assets/images/technologies/iosAndAndroid.png">
+        </div>
+
+    </div>  
+</div>
+</section>
+
+<!-- <section class="one-column technologies">
     <div class="header-text text-align-middle">OUR TECHNOLOGIES</div>
     <div class="techlogogie-list">
         <div>
@@ -93,5 +364,17 @@
             <img height="140" src="assets/images/technologies/react.svg" style="object-fit: cover;">
             <div>React</div>
         </div>
+        <div>
+            <img height="140" src="assets/images/technologies/iosAndAndroid.png" style="object-fit: cover;">
+            <div>IOS & Android</div>
+        </div>
+        <div>
+            <img height="140" src="assets/images/technologies/java.png" style="object-fit: cover;">
+            <div>Java</div>
+        </div>
+        <div>
+            <img height="140" src="assets/images/technologies/heroku.svg" style="object-fit: cover;">
+            <div>Heroku</div>
+        </div>
     </div>
-</section>
+</section> -->

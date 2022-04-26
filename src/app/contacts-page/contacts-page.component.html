@@ -14,6 +14,10 @@
           <mat-icon matSuffix>phone</mat-icon>
           <a href="tel:+1(855) 327-0001" class="contact-links">+1(855) 327-0001</a>
         </div>
+
+        <div>
+          <address><mat-icon matSuffix>location_on</mat-icon>29 Berwick Rd, Hewlett, NY 11557, United States</address>
+        </div>
       </div>
   </div>
 
@@ -42,41 +46,68 @@
         We appreciate your interest in AortaSystems. Fill the form so that we could have a primary insight of your case or just let us know what you think.
         We provide quick replies the same business day.
       </div>
-      <div class="address-info">
+      <!-- <div class="address-info">
         <span><strong>Office in USA:</strong></span>
         <address>29 Berwick Rd, Hewlett, NY 11557, United States</address>
-      </div>
+      </div> -->
     </div>
     <div>
       <div>
-        We are always open to any of your questions. 
-        If you want to contact us, fill out the form below, please. 
-        We will put your question under immediate review and get back to you as soon as possible.
+        Tell us a little about yourself and we’ll get right back to you
       </div>
       <div>
         <p>
-          <mat-form-field appearance="standard">
+          <mat-form-field appearance="standard" style="width: 100%;">
             <mat-label>Your Name</mat-label>
-            <input matInput placeholder="">
+            <input matInput placeholder="" [formControl]="nameFormControl">
             <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="nameFormControl.hasError('required')">
+              Name is required
+            </mat-error>
           </mat-form-field>
         </p>
+
         <p>
-          <mat-form-field appearance="standard">
+          <mat-form-field appearance="standard" style="width: 100%;">
             <mat-label>Email address</mat-label>
-            <input matInput placeholder="">
+            <input matInput placeholder="" [formControl]="emailFormControl">
             <mat-icon matSuffix>email</mat-icon>
             <mat-hint>We'll never share your email with anyone else.</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('email')">
+              The email address is incorrect.
+            </mat-error>
           </mat-form-field>
         </p>
+
         <p>
-          <mat-form-field appearance="legacy">
-            <mat-label >Your message</mat-label>
-            <textarea matInput placeholder="Enter message" rows="7"></textarea>
+          <mat-form-field appearance="standard" style="width: 100%;">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="" (input)="handleInputPhone($event)">
+            <mat-icon matSuffix>phone</mat-icon>
           </mat-form-field>
         </p>
+
+        <p>
+          <mat-form-field appearance="legacy" style="width: 100%;">
+            <mat-label >Your message</mat-label>
+            <textarea matInput placeholder="Enter message" rows="7" [formControl]="messageFormControl"></textarea>
+            <mat-error *ngIf="messageFormControl.hasError('required')">
+              Message is required
+            </mat-error>
+          </mat-form-field>
+        </p>
+
         <p class="text-align-middle">
-          <button mat-stroked-button color="primary" class="button-style">Send</button>
+          <button mat-stroked-button 
+              color="primary" 
+              class="button-style" 
+              [disabled]="emailFormControl.invalid || nameFormControl.invalid || messageFormControl.invalid"
+              (click)="sendEmail()">
+              Send
+          </button>
         </p>
       </div>
     </div>
