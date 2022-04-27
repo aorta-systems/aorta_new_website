@@ -71,6 +71,7 @@
 
   .client-logo {
     position: relative;
+    overflow: hidden;
   }
 
   .client-logo img {
@@ -83,27 +84,31 @@
     filter: blur(4px);
   }
 
-  .client-logo:hover .overlay {
-    bottom: 0;
-    height: 100%;
+  .client-logo:hover .mono-logo {
+    animation: slideDown .5s ease  forwards;
   }
 
+
+  @keyframes slideDown {
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .client-logo:hover .overlay {
+    animation: slideDown .5s ease forwards;
+  }
+
+  .mono-logo  {
+    background-color: #fff;
+  }
 
   .overlay  {
     position: absolute;
     bottom: 100%;
     z-index: 1000;
     background-color: #fff;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 100%;
-    height:0;
-    transition: .5s ease;
   }
-
-
-
 
   @keyframes scale {
     100% {
@@ -178,4 +183,24 @@
 
 .text-animation.active span:nth-child(11) {
   animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-animation.active span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-animation.active span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-animation.active span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-animation.active span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-animation.active span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
