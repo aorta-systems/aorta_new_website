@@ -139,14 +139,16 @@
              color: black; 
              padding: 5em;
              display: grid; 
-             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-             grid-gap: 6em;">
+             justify-items: center;
+             grid-template-columns: 1fr 1fr 1fr;
+             grid-column-gap: 2em;
+            ">
     <div class="card"
             observeVisibility
             [debounceTime]="400"
             (visible)="onVisible($event)"
             (invisible)="onInVisible($event)">
-        
+            
          
             <div class="card-side front">
                 <div class="front-content">WEB</div>
