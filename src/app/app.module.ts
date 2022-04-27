@@ -17,7 +17,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServicesPageComponent } from './services-page/services-page.component';
-// import { ServicesPageComponent } from './services-page/services-page.component';
 
 @NgModule({
   declarations: [

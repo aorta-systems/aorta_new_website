@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
-// import { SolutionsPageComponent } from './solutions-page/solutions-page.component';
+import { ServicesPageComponent } from './services-page/services-page.component';
 import { ClientsPageComponent } from './clients-page/clients-page.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
+  { path: 'services', component: ServicesPageComponent },
   { path: 'clients', component: ClientsPageComponent },
   { path: 'contacts', component: ContactsPageComponent },
 ];
@@ -17,4 +18,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomePageComponent, ClientsPageComponent, ContactsPageComponent]
+export const routingComponents = [HomePageComponent, ServicesPageComponent, ClientsPageComponent, ContactsPageComponent]
