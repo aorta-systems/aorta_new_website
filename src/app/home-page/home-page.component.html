@@ -140,12 +140,12 @@
              padding: 5em;
              display: grid; 
              justify-items: center;
-             grid-template-columns: 1fr 1fr 1fr;
-             grid-column-gap: 2em;
+             grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+             grid-gap: 80px;
             ">
     <div class="card"
             observeVisibility
-            [debounceTime]="400"
+            [debounceTime]="300"
             (visible)="onVisible($event)"
             (invisible)="onInVisible($event)">
             
@@ -173,7 +173,7 @@
         
     <div class="card"
         observeVisibility
-        [debounceTime]="800"
+        [debounceTime]="600"
         (visible)="onVisible($event)"
         (invisible)="onInVisible($event)">
 
@@ -198,7 +198,7 @@
 
     <div class="card"
         observeVisibility
-        [debounceTime]="1200"
+        [debounceTime]="900"
         (visible)="onVisible($event)"
         (invisible)="onInVisible($event)">
 
