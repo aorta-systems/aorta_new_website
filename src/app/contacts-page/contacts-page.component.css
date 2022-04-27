@@ -39,20 +39,6 @@
     line-height: 2em;
     font-weight: 300;
 }
-
-
-@keyframes shine {
-    0% {
-        background-position: 0;
-    }
-    100% {
-        background-position: 10em;
-    }
-} 
-
-mat-form-field {
-    width: 100%;
-}
 .mat-icon {
     vertical-align: middle;
     padding: 0 1rem;
@@ -67,7 +53,6 @@ mat-form-field {
     text-decoration: none;
     color: #fff;
 }
-
 .social-medial-links {
     position: absolute;
     bottom: 0;
@@ -77,7 +62,6 @@ mat-form-field {
     grid-template-columns: repeat(3, 60px);
     gap: 5px;
 }
-
 .social-medial-links.active a:nth-child(1) {
     opacity: 0;
     animation: slideSocialLinks 0.4s 0.4s forwards linear;
@@ -90,37 +74,22 @@ mat-form-field {
     opacity: 0;
     animation: slideSocialLinks 0.4s 1.2s forwards linear;
 }
-
-@keyframes slideSocialLinks {
-    0% {
-       opacity:0;
-       transform: translateX(-200%);
-    }
-    100% {
-       opacity:1;
-       transform: translateX(0);
-    }
-  } 
-
 .container {
     display: grid;
     padding: 2em;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
 }
-
 .info-text {
     font-weight: 400;
     font-size: 1.5em;
     line-height: 1.5em;
     text-align: justify;
 }
-
 .address-info {
     padding-top: 2em;
     font-weight: 300;
 }
-
 .text-align-middle {
     text-align: center;
 }
@@ -130,54 +99,21 @@ mat-form-field {
 :host .mat-stroked-button {
     border-radius: 0px !important;
 }
-
-
-
-/* .blue-card {
-    background-color: #15abe7;
-    padding: 1.5em;
-    color: #fff;
-    font-size: 1.2em;
-    display: grid;
-}
-
-.text-align-left {
-    position: absolute;
-    left: 5px;
- }
-
-.small-header-text {
-    font-size: 1.4em;
-    font-weight: 500;
-}
-
-.medium-header-text {
-    font-size: 1.7rem;
-    font-weight: 400;
-    padding: 0.75rem;
-}
-
-.text-align-middle {
-    text-align: center;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes slideSocialLinks {
+    0% {
+       opacity:0;
+       transform: translateX(-200%);
+    }
+    100% {
+       opacity:1;
+       transform: translateX(0);
+    }
+} 
+@keyframes shine {
+    0% {
+        background-position: -2em;
+    }
+    100% {
+        background-position: 10em;
+    }
+} 

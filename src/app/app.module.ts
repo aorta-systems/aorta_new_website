@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 import { ClientsPageComponent } from './clients-page/clients-page.component';
-import { SolutionsPageComponent } from './solutions-page/solutions-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ObserveVisibilityDirective } from './observe-visibility.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { ServicesPageComponent } from './services-page/services-page.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,9 @@ import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.com
     HeaderComponent,
     ContactsPageComponent,
     ClientsPageComponent,
-    SolutionsPageComponent,
     HomePageComponent,
     ObserveVisibilityDirective,
-    ModalContactUsComponent
+    ModalContactUsComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +34,8 @@ import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.com
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
     MatDialogModule 
