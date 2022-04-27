@@ -358,6 +358,7 @@ animation: slidetop .3s ease forwards;
 }
 
 .card-side.back {
+  max-width: 450px;
   box-sizing: border-box;
   padding: 2em;
   transform: rotateY(-180deg);
@@ -400,6 +401,7 @@ animation: slidetop .3s ease forwards;
 }
 
 .card-side.front {
+  max-width: 450px;
   background-color: #444444;
   background-color: #ca2026;
   /* background-color: #b6b6b6;
@@ -419,6 +421,7 @@ animation: slidetop .3s ease forwards;
 }
 
 .front-content {
+  color: #f6f6f6;
   position: absolute;
   top: 50%;
   left: 50%;
