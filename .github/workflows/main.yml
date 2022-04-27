@@ -8,7 +8,7 @@ env:
   
 on:
   push:
-    branches: [ old ]
+    branches: [ master ]
 
 jobs:
   archive-and-deploy-to-aws:
