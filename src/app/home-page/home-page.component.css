@@ -404,11 +404,11 @@ animation: slidetop .3s ease forwards;
   max-width: 450px;
   background-color: #444444;
   background-color: #ca2026;
+  font-size: 2em; 
   /* background-color: #b6b6b6;
   background-color: #0a273d; */
   /* color: #ca2026; */
-  color: #ca2026;
-  font-size: 2em; 
+  color: #f6f6f6;
   font-weight: 800;
   border-radius: 15px;
   height: 100%;
@@ -421,7 +421,6 @@ animation: slidetop .3s ease forwards;
 }
 
 .front-content {
-  color: #f6f6f6;
   position: absolute;
   top: 50%;
   left: 50%;
