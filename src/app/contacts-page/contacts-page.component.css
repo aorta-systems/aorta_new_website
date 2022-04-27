@@ -77,24 +77,27 @@
 .container {
     display: grid;
     padding: 2em;
-    grid-template-columns: 1fr 1fr;
-    gap: 3em;
-}
-.info-text {
-    font-weight: 400;
-    font-size: 1.5em;
+    grid-template-columns: minmax(250px, 700px);
+    align-content: center;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 1.2em;
     line-height: 1.5em;
-    text-align: justify;
+    gap: 3em;
+    color: #353c4a;
 }
-.address-info {
-    padding-top: 2em;
-    font-weight: 300;
+
+.info {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    font-weight: 400;
 }
+
 .text-align-middle {
     text-align: center;
 }
 .button-style {
-    padding: 7px 45px;
+    padding: 10px 75px;
 }
 :host .mat-stroked-button {
     border-radius: 0px !important;

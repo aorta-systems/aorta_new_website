@@ -2,11 +2,26 @@ import { Component, OnInit } from '@angular/core';
 
 const CLIENTS = [
   {
+    src      : "assets/images/clients/docker_logo.png",
+    srcMono  : "assets/images/clients/docker_logoMono.png",
+    url      : "https://www.docker.com/"
+  },{
+    src      : "assets/images/clients/mirantis.png",
+    srcMono  : "assets/images/clients/mirantisMono.png",
+    url      : "https://www.mirantis.com/"
+  },{
+    src      : "assets/images/clients/hortonworks_logo.png",
+    srcMono  : "assets/images/clients/hortonworks_logoMono.png",
+    url      : "https://www.cloudera.com/"
+  },{
+    src      : "assets/images/clients/cloudera-logo.png",
+    srcMono  : "assets/images/clients/cloudera-logoMono.png",
+    url      : "https://www.cloudera.com/"
+  },{
     src      : "assets/images/clients/Cider1.png",
     srcMono  : "assets/images/clients/Cider1Mono.png",
     url      : "https://getcider.com/"
-  }
-  ,{
+  },{
     src      : "assets/images/clients/cloud-alliance-partner-logo.png",
     srcMono  : "assets/images/clients/cloud-alliance-partner-logoMono.png",
     url      : "http://www.salesforce.com/"
@@ -34,14 +49,6 @@ const CLIENTS = [
     src      : "assets/images/clients/greatwater1.png",
     srcMono  : "assets/images/clients/greatwater1Mono.png",
     url      : "https://www.greatwater.us/"
-  },{
-    src      : "assets/images/clients/hortonworks_logo.png",
-    srcMono  : "assets/images/clients/hortonworks_logoMono.png",
-    url      : "https://www.cloudera.com/"
-  },{
-    src      : "assets/images/clients/cloudera-logo.png",
-    srcMono  : "assets/images/clients/cloudera-logoMono.png",
-    url      : "https://www.cloudera.com/"
   },{
     src      : "assets/images/clients/joor_logo.png",
     srcMono  : "assets/images/clients/joor_logoMono.png",
@@ -118,14 +125,6 @@ const CLIENTS = [
     src      : "assets/images/clients/stonehendge.png",
     srcMono  : "assets/images/clients/stonehendgeMono.png",
     url      : "https://www.stonehengenyc.com/"
-  },{
-    src      : "assets/images/clients/docker_logo.png",
-    srcMono  : "assets/images/clients/docker_logoMono.png",
-    url      : "https://www.docker.com/"
-  },{
-    src      : "assets/images/clients/mirantis.png",
-    srcMono  : "assets/images/clients/mirantisMono.png",
-    url      : "https://www.mirantis.com/"
   },{
     src      : "assets/images/clients/tipalti_logo.png",
     srcMono  : "assets/images/clients/tipalti_logoMono.png",
