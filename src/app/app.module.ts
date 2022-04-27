@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServicePageComponent } from './service-page/service-page.component';
+import { ServicesPageComponent } from './services-page/services-page.component';
 // import { ServicesPageComponent } from './services-page/services-page.component';
 
 @NgModule({
@@ -27,6 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomePageComponent,
     ObserveVisibilityDirective,
     ModalContactUsComponent,
+    ServicePageComponent,
+    ServicesPageComponent,
   ],
   imports: [
     BrowserModule,
