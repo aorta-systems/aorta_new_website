@@ -43,7 +43,7 @@
 
 @keyframes shine {
     0% {
-        background-position: -2em;
+        background-position: 0;
     }
     100% {
         background-position: 10em;
