@@ -264,9 +264,6 @@
              display: grid; 
              grid-template-columns: 1fr 1fr 1fr; 
              grid-gap: 6em;">
-
-
-
     <div class="card"
             observeVisibility
             [debounceTime]="400"
@@ -274,7 +271,13 @@
             (invisible)="onInVisible($event)">
         
          
-            <div class="card-side front"></div>
+            <div class="card-side front">
+                <div class="front-content">WEB</div>
+                <!-- <div style="      background-image: url('/assets/images/technologies/web_logo.png'); 
+                background-repeat: no-repeat;
+                background-size:contain; object-fit: cover;"></div> -->
+                <!-- <img height="100%" src="assets/images/technologies/web_logo.png" style="object-fit: cover; opacity: 20%; "> -->
+            </div>
             <div class="card-side back">
                 <div class="card-header">Web</div>
         
@@ -283,7 +286,7 @@
                     AngularJS, NodeJS, ReactJS and more, we can bring into reality every idea that you’ve got!
                 </div>
     
-                <div>
+                <div class="card-footer">
                     <img src="assets/images/technologies/angular.svg" >
                     <img src="assets/images/technologies/react.svg" >
                     <img src="assets/images/technologies/heroku.svg">
@@ -300,7 +303,9 @@
         (invisible)="onInVisible($event)">
 
     
-        <div class="card-side front"></div>
+        <div class="card-side front">
+            <div class="front-content">SALESFORCE</div>
+        </div>
         <div class="card-side back">
             <div class="card-header">Salesforce</div>
         
@@ -308,10 +313,11 @@
                 Experience all powerful features of lead cloud enterprise platform Salesforce.com with real professionals from our company - Platinum SFDC Partner!
             </div>
 
-            <div>
-                <img src="assets/images/technologies/salesforce.svg">
+            <div class="card-footer">
+                <img src="assets/images/technologies/servicecloud_logo.png">
+                <img src="assets/images/technologies/marketing-cloud.png">
+                <img src="assets/images/technologies/salesforce-com.png">
             </div>
-
         </div>  
     </div>
 
@@ -321,7 +327,9 @@
         (visible)="onVisible($event)"
         (invisible)="onInVisible($event)">
 
-    <div class="card-side front"></div>
+    <div class="card-side front">
+        <div class="front-content">MOBILE</div>
+    </div>
     <div class="card-side back">
         <div class="card-header">Mobile</div>
         
@@ -329,10 +337,10 @@
             Reinforce your business with mobile solutions! By designing right architecture or mobile extension we’ll help you to manage various processes with appropriate mobile app.
         </div>
 
-        <div>
-            <img src="assets/images/technologies/iosAndAndroid.png">
+        <div class="card-footer">
+            <img src="assets/images/technologies/salesforce_mobile.png">
+            <img src="assets/images/technologies/mobile.png">
         </div>
-
     </div>  
 </div>
 </section>
