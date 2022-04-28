@@ -1,55 +1,59 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+var port = process.env.PORT || 3000;
+var http = require('http');
+var fs = require('fs');
+var html = fs.readFileSync('index.html');
+var path = require('path');
 
-const details = require("./details.json");
-
-const app = express();
-app.use(cors({ origin: "*" }));
-app.use(bodyParser.json());
-
-app.listen(3000, () => {
-  console.log("The server started on port 3000 !!!!!!");
-});
-
-app.get("/", (req, res) => {
-  res.send(
-    "<h1 style='text-align: center'>Wellcome to FunOfHeuristic <br><br>😃👻😃👻😃👻😃👻😃</h1>"
-  );
-});
-
-app.post("/sendmail", (req, res) => {
-  console.log("request came");
-  let user = req.body;
-  sendMail(user, info => {
-    console.log(`The mail has beed send 😃 and the id is ${info.messageId}`);
-    res.send(info);
-  });
-});
-
-async function sendMail(user, callback) {
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: details.email,
-      pass: details.password
+var server = http.createServer(function (request, response) {
+    var filePath = '.' + request.url;
+    if (filePath == './') {
+        filePath = './index.html';
     }
-  });
 
-  let mailOptions = {
-    from: '"Fun Of Heuristic"<example.gimail.com>', // sender address
-    to: user.email, // list of receivers
-    subject: "Wellcome to Fun Of Heuristic 👻", // Subject line
-    html: `<h1>Hi ${user.name}</h1><br>
-    <h4>Thanks for joining us</h4>`
-  };
+    var extname = String(path.extname(filePath)).toLowerCase();
+    var mimeTypes = {
+        '.js': 'text/javascript',
+        '.css': 'text/css',
+        '.json': 'application/json',
+        '.png': 'image/png',
+        '.jpg': 'image/jpg',
+        '.gif': 'image/gif',
+        '.svg': 'image/svg+xml',
+        '.wav': 'audio/wav',
+        '.mp4': 'video/mp4',
+        '.woff': 'application/font-woff',
+        '.ttf': 'application/font-ttf',
+        '.eot': 'application/vnd.ms-fontobject',
+        '.otf': 'application/font-otf',
+        '.wasm': 'application/wasm'
+    };
 
-  // send mail with defined transport object
-  let info = await transporter.sendMail(mailOptions);
+    var contentType = mimeTypes[extname] || undefined;
 
-  callback(info);
-}
+    if (contentType == undefined) {
+        filePath = './index.html';
+        contentType = 'text/html';
+    }
+
+    fs.readFile(filePath, function(error, content) {
+        if (error) {
+            if(error.code == 'ENOENT') {
+                fs.readFile('./404.html', function(error, content) {
+                    response.writeHead(404, { 'Content-Type': 'text/html' });
+                    response.end(content, 'utf-8');
+                });
+            }
+            else {
+                response.writeHead(500);
+                response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+            }
+        }
+        else {
+            response.writeHead(200, { 'Content-Type': contentType });
+            response.end(content, 'utf-8');
+        }
+    });
+});
+
+// Listen on port 3000, IP defaults to 127.0.0.1
+server.listen(port);
