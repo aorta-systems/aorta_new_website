@@ -17,6 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModalContactUsComponent } from './modal-contact-us/modal-contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServicesPageComponent } from './services-page/services-page.component';
+import { HttpClientModule  } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { ServicesPageComponent } from './services-page/services-page.component';
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule 
+    MatDialogModule,
+    HttpClientModule 
   ],
   entryComponents:[MatDialogModule],
   providers: [],
