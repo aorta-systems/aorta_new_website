@@ -75,7 +75,7 @@
         <p>
           <mat-form-field appearance="standard" style="width: 100%;">
             <mat-label>Phone Number</mat-label>
-            <input matInput placeholder="" (input)="handleInputPhone($event)">
+            <input matInput placeholder="" (input)="handleInputPhone($event)" [formControl]="phoneFormControl">
             <mat-icon matSuffix>phone</mat-icon>
           </mat-form-field>
         </p>

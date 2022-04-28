@@ -12,10 +12,10 @@ export class ContactsPageComponent implements OnInit {
   loading = false;
   nameFormControl    = new FormControl("", [ Validators.required ]);
   emailFormControl   = new FormControl("", [ Validators.required, Validators.email ]);
+  phoneFormControl   = new FormControl("", [ ]);
   messageFormControl = new FormControl("", [ Validators.required, Validators.minLength(4) ]);
-  http = HttpClient
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -50,20 +50,22 @@ export class ContactsPageComponent implements OnInit {
     const email = {
       name : this.nameFormControl.value,
       email : this.emailFormControl.value,
+      phone : this.phoneFormControl.value,
       message : this.messageFormControl.value
     };
 
-    // this.http.post('/sendEmail', email).subscribe(
-    //   data => {
-    //     console.log('********')
-    //   },
-    //   err => {
-    //     console.error('error ********')
-    //   },
-    //   () => {
-    //     this.loading = false;
-    //   }
-    // )
+
+    this.http.post('/sendEmail', email).subscribe(
+      data => {
+        console.log('********')
+      },
+      err => {
+        console.error('error ********')
+      },
+      () => {
+        this.loading = false;
+      }
+    )
   }
 
 }
