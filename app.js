@@ -1,6 +1,5 @@
 
 
-var port = 80;
 const express = require('express')
 const cors = require('cors');
 const bodyParser = require('body-parser')
@@ -16,8 +15,8 @@ app.get('/', (req, res) => {
 });
 
 const httpServer = http.createServer(app);
-httpServer.listen(port, () => {
-  console.log(`API is now live on ${port}`);
+httpServer.listen(env.port, () => {
+  console.log(`API is now live on ${env.port}`);
 });
 
 
