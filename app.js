@@ -27,6 +27,7 @@ var server = http.createServer(function (request, response) {
         '.otf': 'application/font-otf',
         '.wasm': 'application/wasm'
     };
+    
 
     var contentType = mimeTypes[extname] || undefined;
 
