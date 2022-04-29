@@ -3,7 +3,7 @@ var http = require('http');
 var fs = require('fs');
 var html = fs.readFileSync('index.html');
 var path = require('path');
-// const nodemailer = require("nodemailer");
+var nodemailer = require("nodemailer");
 
 
 // async function sendMail(user, callback) {
