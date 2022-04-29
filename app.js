@@ -6,41 +6,41 @@ var path = require('path');
 const nodemailer = require("nodemailer");
 
 
-async function sendMail(user, callback) {
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      host: "smtp.zoho.com",
-      port: 465,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: "aleksei@aortasystems.com",
-        pass: "WBPxSEC7dmHP"
-      }
-    });
+// async function sendMail(user, callback) {
+//     // create reusable transporter object using the default SMTP transport
+//     let transporter = nodemailer.createTransport({
+//       host: "smtp.zoho.com",
+//       port: 465,
+//       secure: false, // true for 465, false for other ports
+//       auth: {
+//         user: "aleksei@aortasystems.com",
+//         pass: "WBPxSEC7dmHP"
+//       }
+//     });
 
 
-    //WBPxSEC7dmHP
+//     //WBPxSEC7dmHP
 
-    let mailOptions = {
-      from: '"AORTA SITE MESSAGE"<example.gimail.com>', // sender address
-      to: "aleksei@aortasystems.com", // list of receivers
-      subject: "AORTA SITE MESSAGE", // Subject line
-      html: `<h1>Hi</h1><br>
-      <h4>Thanks for joining us</h4>`
-    };
+//     let mailOptions = {
+//       from: '"AORTA SITE MESSAGE"<example.gimail.com>', // sender address
+//       to: "aleksei@aortasystems.com", // list of receivers
+//       subject: "AORTA SITE MESSAGE", // Subject line
+//       html: `<h1>Hi</h1><br>
+//       <h4>Thanks for joining us</h4>`
+//     };
   
-    // send mail with defined transport object
-    let info = await transporter.sendMail(mailOptions);
+//     // send mail with defined transport object
+//     let info = await transporter.sendMail(mailOptions);
   
-    callback(info);
-  }
+//     callback(info);
+// }
 
 var server = http.createServer(function (request, response) {
-    if (request.method === 'POST' &&  request.url === '/sendEmail') {
-        sendMail(email, info => {
-            res.send(info);
-        });
-    }
+    // if (request.method === 'POST' &&  request.url === '/sendEmail') {
+    //     sendMail(email, info => {
+    //         res.send(info);
+    //     });
+    // }
 
 
 
