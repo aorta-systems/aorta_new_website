@@ -43,7 +43,7 @@ jobs:
 
       - name: Install nodemailer
         run: |
-          npm install nodemailer --save
+          npm install nodemailer
 
       - name: Build
         run: |
