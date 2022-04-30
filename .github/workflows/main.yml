@@ -24,7 +24,7 @@ jobs:
 
       - name: Install express
         run: |
-          npm install express
+          npm install --save express aws-sdk multer
 
       - name: Cache node modules
         id: cache-nodemodules
