@@ -94,6 +94,9 @@ jobs:
             
       - name: deploy app
         run : aws elasticbeanstalk update-environment --environment-name "${{ env.EB_ENVIRONMENT_NAME }}" --version-label "Sample Application 1 ${{ github.sha }}"
-            
+
+      - name: install express
+        run : aws elasticbeanstalk npm install
+             
       - run: echo "COMPLETE!"
 
