@@ -57,9 +57,9 @@ jobs:
         run: |
           cp "./app.js" "./dist/aorta_new_website/"
 
-      - name: copy package.json to dist
-        run: |
-          cp "./package.json" "./dist/aorta_new_website/"
+      # - name: copy package.json to dist
+      #   run: |
+      #     cp "./package.json" "./dist/aorta_new_website/"
 
       - name: Switch to Release Folder
         working-directory: dist/aorta_new_website
@@ -99,8 +99,8 @@ jobs:
       - name: deploy app
         run : aws elasticbeanstalk update-environment --environment-name "${{ env.EB_ENVIRONMENT_NAME }}" --version-label "Sample Application 1 ${{ github.sha }}"
 
-      - name: install dependensies
-        run : npm install
+      - name: install express
+        run : npm install express
              
       - run: echo "COMPLETE!"
 
