@@ -57,6 +57,10 @@ jobs:
         run: |
           cp "./app.js" "./dist/aorta_new_website/"
 
+      - name: copy package.json to dist
+        run: |
+          cp "./package.json" "./dist/aorta_new_website/"
+
       - name: Switch to Release Folder
         working-directory: dist/aorta_new_website
         run: |
