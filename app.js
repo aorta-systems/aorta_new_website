@@ -9,13 +9,13 @@ const app = express();
 // app.use(bodyParser.json());
 
 app.listen(port, () => {
-  console.log("The server started 3000 !!!!!!");
+    console.log("The server started on port:" + port);
 });
 
-app.get("/", (req, res) => {
-  res.send(
-    "<h1 style='text-align: center'>Wellcome to FunOfHeuristic <br><br>😃👻😃👻😃👻😃👻😃</h1>"
-  );
+app.server.get('*.*', express.static('./', {maxAge: '1y'}));
+
+app.all('*', function (req, res) {
+    res.status(200).sendFile('./index.html', {root: './'});
 });
 
 
