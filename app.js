@@ -15,6 +15,44 @@ app.listen(port, () => {
     console.log("The server started on port:" + port);
 });
 
+app.post("/sendmail", (req, res) => {
+    console.log("request came");
+    let email = req.body;
+
+    sendMail(email, info => {
+        res.send(info);
+    });
+});
+
+
+async function sendMail(user, callback) {
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      host: "smtp.zoho.com",
+      port: 465,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: "aleksei@aortasystems.com",
+        pass: "WBPxSEC7dmHP"
+      }
+    });
+
+//WBPxSEC7dmHP
+
+    let mailOptions = {
+      from: '"AORTA SITE MESSAGE"<example.gimail.com>', // sender address
+      to: "aleksei@aortasystems.com", // list of receivers
+      subject: "AORTA SITE MESSAGE", // Subject line
+      html: `<h1>Hi</h1><br>
+      <h4>Thanks for joining us</h4>`
+    };
+  
+    // send mail with defined transport object
+    let info = await transporter.sendMail(mailOptions);
+  
+    callback(info);
+}
+
 
 // app.use(cors({ origin: "*" }));
 // app.use(bodyParser.json());
