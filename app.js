@@ -5,18 +5,26 @@ var port = process.env.PORT || 3000;
 // const nodemailer = require("nodemailer");
 
 const app = express();
-// app.use(cors({ origin: "*" }));
-// app.use(bodyParser.json());
+
+app.use(express.static(__dirname));
+app.all('/*', function(req, res, next) {
+    res.sendFile('index.html', { root: __dirname });
+});
 
 app.listen(port, () => {
     console.log("The server started on port:" + port);
 });
 
-app.server.get('*.*', express.static('./', {maxAge: '1y'}));
 
-app.all('*', function (req, res) {
-    res.status(200).sendFile('./index.html', {root: './'});
-});
+// app.use(cors({ origin: "*" }));
+// app.use(bodyParser.json());
+
+
+// app.server.get('*.*', express.static('./', {maxAge: '1y'}));
+
+// app.all('*', function (req, res) {
+//     res.status(200).sendFile('./index.html', {root: './'});
+// });
 
 
 
