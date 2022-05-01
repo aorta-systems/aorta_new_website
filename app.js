@@ -1,12 +1,10 @@
 var express = require("express");
-
 var port = process.env.PORT || 3000;
 var http = require('http');
 var fs = require('fs');
 var html = fs.readFileSync('index.html');
 var path = require('path');
-// var nodemailer = require("nodemailer");
-
+var nodemailer = require("nodemailer");
 
 // async function sendMail(user, callback) {
 //     // create reusable transporter object using the default SMTP transport
