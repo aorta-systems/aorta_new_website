@@ -22,9 +22,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install express
-        run: |
-          npm install --save express aws-sdk multer
+      # - name: Install express
+      #   run: |
+      #     npm install --save express aws-sdk multer
 
       - name: Cache node modules
         id: cache-nodemodules
@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install Dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        # if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
           npm ci
 
@@ -94,11 +94,11 @@ jobs:
             aws-secret-access-key : ${{ secrets.AWS_SECRET_KEY }}
             aws-region            : ${{ env.AWS_REGION_NAME }}
 
-      - name: npm install
-        run: |
-          nvm install express
-        env:
-          CI: true
+      # - name: npm install
+      #   run: |
+      #     nvm install express
+      #   env:
+      #     CI: true
 
       - name: create new Beacn App
         run : aws elasticbeanstalk create-application-version --application-name "${{ env.EB_APPLICATION_NAME }}" --source-bundle S3Bucket="${{ env.EB_PACKAGE_S3_BUCKET_NAME }}",S3Key="${{ env.DEPLOY_PACKAGE_NAME }}" --version-label "Sample Application 1 ${{ github.sha }}" --description "commit-${{ github.sha }}"
