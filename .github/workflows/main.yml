@@ -59,7 +59,7 @@ jobs:
 
       - name: copy node_modules to dist
         run: |
-          cp "./node_modules" "./dist/aorta_new_website/"
+          rsync -rv "./node_modules" "./dist/aorta_new_website/"
 
       - name: Switch to Release Folder
         working-directory: dist/aorta_new_website
