@@ -3,8 +3,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 
-const details = require("./details.json");
-
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
@@ -30,15 +28,26 @@ app.post("/sendmail", (req, res) => {
 
 async function sendMail(user, callback) {
   // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: details.email,
-      pass: details.password
-    }
-  });
+//   let transporter = nodemailer.createTransport({
+//     host: "smtp.gmail.com",
+//     port: 587,
+//     secure: false, // true for 465, false for other ports
+//     auth: {
+//       user: details.email,
+//       pass: details.password
+//     }
+//   });
+
+
+    let transporter = nodemailer.createTransport({
+      host: "smtp.zoho.com",
+      port: 465,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: "aleksei@aortasystems.com",
+        pass: "WBPxSEC7dmHP"
+      }
+    });
 
   let mailOptions = {
     from: '"Fun Of Heuristic"<example.gimail.com>', // sender address
