@@ -40,7 +40,7 @@ async function sendMail(email, callback) {
 
     let mailOptions = {
       from: '"Aorta SITE"<sales@aortasystems.com>', // sender address
-      to: "aleksei@aortasystems.com", // info@aortasystems.com
+      to: "info@aortasystems.com", // info@aortasystems.com
       subject: "AORTA SITE MESSAGE", // Subject line
       html: `
         <p><strong>Name:&nbsp;</strong> ${email.name}</p>
