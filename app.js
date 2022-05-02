@@ -2,7 +2,7 @@ const express = require("express");
 var port = process.env.PORT || 3000;
 // const cors = require("cors");
 const bodyParser = require("body-parser");
-// const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 
 const app = express();
 
@@ -14,10 +14,10 @@ app.post('/sendmail', (req, res) => {
     let email = req.body;
 
 
-    res.send(email);
-    // sendMail(email, info => {
-    //     res.send(info);
-    // });
+    // res.send(email);
+    sendMail(email, info => {
+        res.send(info);
+    });
 });
 
 app.get('/*', function(req, res, next) {
