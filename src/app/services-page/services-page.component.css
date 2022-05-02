@@ -59,7 +59,7 @@
 .highlight-service-card {
     background-color: #f6f6f6;
     transform: scaleX(1.05);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 12px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 2px 7px 15px 0px;
 }
 .content {
     padding: 30px;
