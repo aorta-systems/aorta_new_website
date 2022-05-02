@@ -2,15 +2,9 @@
     display: flex;
     flex-flow: column;
 }
-.content {
-    padding: 2em;
-    max-width: 1170px;
-    width: 100%;
-    align-self: center;
-}
-.contact-page-header {
+.service-page-header {
     position: relative;
-    background-image: url('/assets/images/solutionsHeader.jpg');
+    background-image: url('/assets/images/servicepage/header.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     height: 500px;
@@ -25,8 +19,9 @@
     left: 2em;
 }
 .header-text {
-    font-weight: 500;
-    font-size: 2.8em;
+    /* text-align: center; */
+    font-weight: 600;
+    font-size: 3em;
     line-height: 2em;
     color: white;
     background: linear-gradient(
@@ -52,3 +47,106 @@
         background-position: 10em;
     }
 } 
+
+
+.content {
+    padding: 30px;
+    max-width: 1170px;
+    width: 100%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.service-card-container {
+    padding: 2em;
+}
+.service-card-container:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.service-card {
+    /* background-color: #fafafa; */
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3em;
+}
+.service-header {
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+}
+.service-body {
+    text-align: justify;
+}
+.service-logo {
+    align-self: center;
+    justify-self: center;
+}
+.service-logo img {
+    height: 200px;
+    width: 200px;
+    object-fit:cover;
+}
+
+.slideleft {
+    opacity: 0;
+    animation: fade-out-left .3s ease forwards;
+}
+.active .slideleft, .slideleft.active {
+    animation: slideleft .3s ease forwards;
+}
+.slideright {
+    opacity: 0;
+    animation: fade-out-right .3s ease forwards;
+}
+.active .slideright, .slideright.active {
+    animation: slideright .3s ease forwards;
+}
+  
+@keyframes fade-out-right {
+    0% {
+       opacity:1;
+       transform: translateX(0px);
+    }
+    100% {
+       opacity:0;
+       transform: translateX(-20px);
+    }
+} 
+
+@keyframes fade-out-left {
+    0% {
+       opacity:1;
+       transform: translateX(0px);
+    }
+    100% {
+       opacity:0;
+       transform: translateX(100px);
+    }
+} 
+  
+@keyframes slideright {
+    0% {
+      opacity:0;
+      transform: translateX(0px);
+    }
+    1% {
+       opacity:0;
+       transform: translateX(-50px);
+    }
+    100% {
+       opacity:1;
+       transform: translateX(0);
+    }
+} 
+@keyframes slideleft {
+    from {
+       opacity:0;
+       transform: translateX(100px);
+    }
+    to {
+       opacity:1;
+       transform: translateX(0);
+    }
+}

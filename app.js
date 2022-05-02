@@ -33,14 +33,14 @@ async function sendMail(email, callback) {
       port: 465,
       secure: true,
       auth: {
-        user: "aleksei@aortasystems.com",
-        pass: "Aa461033"
+        user: "sales@aortasystems.com",
+        pass: "AortaSystems2022!"
       }
     });
 
     let mailOptions = {
-      from: '"Aorta SITE"<aleksei@aortasystems.com>', // sender address
-      to: "aleksei@aortasystems.com", // list of receivers
+      from: '"Aorta SITE"<sales@aortasystems.com>', // sender address
+      to: "aleksei@aortasystems.com", // info@aortasystems.com
       subject: "AORTA SITE MESSAGE", // Subject line
       html: `
         <p><strong>Name:&nbsp;</strong> ${email.name}</p>

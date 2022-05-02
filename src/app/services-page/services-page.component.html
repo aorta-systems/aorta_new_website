@@ -1,8 +1,8 @@
-<section class="contact-page-header">
+<section class="service-page-header">
     <app-header></app-header>
     <div class="header-section">
         <div class="header-text header-text-animation">
-          Services
+           OUR SERVICES
         </div>
         <div class="under-header-text text-animation">
           <!-- Hey! we are looking forward to start project with you -->
@@ -24,42 +24,163 @@
   
 
   <section class="content">
-     
-  </section>
-  
-  <section class="content">
-    1.Salesforce consulting services  
-  </section>
+      <div class="service-card-container">
+            <div class="service-card"
+                observeVisibility
+                [debounceTime]="200"
+                (visible)="onVisible($event)"
+                (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/consultant.jpg"></div>
+                <div class="service-body slideleft">
+                    <div class="service-header">Salesforce consulting services</div>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                        Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                        hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                        Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                        felis pellentesque id. Donec non lacus diam.
+                    </div>
+                </div>
+            </div>
+      </div>
 
-  <section class="content">
-    2.Salesforce technical implementation    
-  </section>
+    <div class="service-card-container">
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/service1.jpg"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">Salesforce technical implementation</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="service-card-container">
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/development.jpg"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">Salesforce custom development</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <section class="content">
-    3.Salesforce custom development 
-  </section>
+    <div class="service-card-container">   
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/integrations.jpg"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">Salesforce integrations</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="service-card-container">  
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/automation.jpg"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">Salesforce automation & enhancements</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <section class="content">
-    4.Salesforce integrations  
-  </section>
+    <div class="service-card-container">  
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/productdevelopment.png"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">AppExchange product development</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="service-card-container"> 
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/mobile.jpg"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">Mobile App Development</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <section class="content">
-    5.Salesforce automation & enhancements  
-  </section>
-
-
-  <section class="content">
-    6.AppExchange product development  
-  </section>
-
-  <section class="content">
-    7. Mobile App Development 
-  </section>
-
-  
-  <section class="content">
-    7. Web Development
+    <div class="service-card-container"> 
+        <div class="service-card"
+            observeVisibility
+            [debounceTime]="200"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)">
+            <div class="service-logo slideright"><img src="assets/images/servicepage/webdevelopment.jpg"></div>
+            <div class="service-body slideleft">
+                <div class="service-header">Web Development</div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
+                    Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
+                    hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. 
+                    Praesent iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis 
+                    felis pellentesque id. Donec non lacus diam.
+                </div>
+            </div>
+        </div>
+    </div>
   </section>

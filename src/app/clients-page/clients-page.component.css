@@ -54,17 +54,13 @@
   @keyframes slideHeader {
     0% {
        opacity:0;
-       /* transform: translateY(-200%); */
        transform: translateX(-200%);
     }
     70% {
       opacity:0;
-      /* transform: translateX(-200px); */
-      /* transform: translateY(-100%); */
    }
     100% {
        opacity:1;
-       /* transform: translateX(0); */
        transform: translateY(0);
     }
   } 
