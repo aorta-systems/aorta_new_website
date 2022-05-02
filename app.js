@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
-app.all('/*', function(req, res, next) {
+app.get('/*', function(req, res, next) {
     res.sendFile('index.html', { root: __dirname });
 });
 

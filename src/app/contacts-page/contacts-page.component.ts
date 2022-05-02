@@ -55,7 +55,7 @@ export class ContactsPageComponent implements OnInit {
     };
 
     console.log(email);
-    this.http.post('/sendEmail', email).subscribe(
+    this.http.post('/sendmail', email).subscribe(
       data => {
         console.log('********')
       },
