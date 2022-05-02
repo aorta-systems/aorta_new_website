@@ -60,7 +60,8 @@ export class ContactsPageComponent implements OnInit {
         console.log('********')
       },
       err => {
-        console.error('error ********')
+        console.error('error ********');
+        console.error(err);
       },
       () => {
         this.loading = false;
