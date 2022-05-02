@@ -1,38 +1,47 @@
 <section class="service-page-header">
     <app-header></app-header>
+
+
+        <div class="header-text" style="  
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);">
+            OUR SERVICES
+         </div>
+
+
+    <div class="list-of-services" style="padding-left: 2em; position: absolute; bottom: 2em; font-size: 1.6em;  line-height: 1.5em; font-weight: 300; color: rgb(230, 230, 230);">
+        <div class="header-service" (click)="moveToService('service1')">- Salesforce consulting services</div>
+        <div class="header-service" (click)="moveToService('service2')">- Salesforce technical implementation</div>
+        <div class="header-service" (click)="moveToService('service3')">- Salesforce custom development</div>
+        <div class="header-service" (click)="moveToService('service4')">- Salesforce integrations</div>
+        <div class="header-service" (click)="moveToService('service5')">- Salesforce automation & enhancements</div>
+        <div class="header-service" (click)="moveToService('service6')">- AppExchange product development</div>
+        <div class="header-service" (click)="moveToService('service7')">- Mobile App Development</div>
+        <div class="header-service" (click)="moveToService('service8')">- Web Development</div>
+    </div>
+
+
+<!-- 
     <div class="header-section">
         <div class="header-text header-text-animation">
-           OUR SERVICES
-        </div>
-        <div class="under-header-text text-animation">
-          <!-- Hey! we are looking forward to start project with you -->
-        </div>
-        <!-- <div class="under-header-text text-animation"
-             observeVisibility
-             [debounceTime]="300"
-             (visible)="onVisible($event)"
-             (invisible)="onInVisible($event)">
-            <span>Something about our clients.... </span>
-            <span>Example: Design on Edge represent </span>
-            <span>a wide range o</span>
-            <span>f indusctries includeng </span>
-            <span>hospitality, property nama</span>
-            <span>gement, companies, sta</span>
-        </div> -->
-    </div>
+            OUR SERVICES
+         </div>
+    </div> -->
   </section>
   
 
   <section class="content">
-      <div class="service-card-container">
-            <div class="service-card"
-                observeVisibility
-                [debounceTime]="200"
-                (visible)="onVisible($event)"
-                (invisible)="onInVisible($event)">
+      <div id="service1" class="service-card-container">
+            <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/consultant.jpg"></div>
                 <div class="service-body slideleft">
-                    <div class="service-header">Salesforce consulting services</div>
+                    <div class="service-header"
+                        observeVisibility
+                        [debounceTime]="200"
+                        (visible)="onVisible($event)"
+                        (invisible)="onInVisible($event)">Salesforce consulting services</div>
                     <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                         Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -44,15 +53,15 @@
             </div>
       </div>
 
-    <div class="service-card-container">
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div id="service2" class="service-card-container">
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/service1.jpg"></div>
             <div class="service-body slideleft">
-                <div class="service-header">Salesforce technical implementation</div>
+                <div class="service-header"
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)">Salesforce technical implementation</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -64,15 +73,15 @@
         </div>
     </div>
 
-    <div class="service-card-container">
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div id="service3" class="service-card-container">
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/development.jpg"></div>
             <div class="service-body slideleft">
-                <div class="service-header">Salesforce custom development</div>
+                <div class="service-header"
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)" >Salesforce custom development</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -84,15 +93,15 @@
         </div>
     </div>
 
-    <div class="service-card-container">   
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div id="service4" class="service-card-container">   
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/integrations.jpg"></div>
             <div class="service-body slideleft">
-                <div class="service-header">Salesforce integrations</div>
+                <div class="service-header" 
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)">Salesforce integrations</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -104,15 +113,15 @@
         </div>
     </div>
 
-    <div class="service-card-container">  
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div id="service5" class="service-card-container">  
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/automation.jpg"></div>
             <div class="service-body slideleft">
-                <div class="service-header">Salesforce automation & enhancements</div>
+                <div class="service-header" 
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)">Salesforce automation & enhancements</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -124,15 +133,15 @@
         </div>
     </div>
 
-    <div class="service-card-container">  
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div  id="service6" class="service-card-container">  
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/productdevelopment.png"></div>
             <div class="service-body slideleft">
-                <div class="service-header">AppExchange product development</div>
+                <div class="service-header"
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)">AppExchange product development</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -144,15 +153,15 @@
         </div>
     </div>
 
-    <div class="service-card-container"> 
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div id="service7" class="service-card-container"> 
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/mobile.jpg"></div>
             <div class="service-body slideleft">
-                <div class="service-header">Mobile App Development</div>
+                <div class="service-header" 
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)">Mobile App Development</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,
@@ -164,15 +173,15 @@
         </div>
     </div>
 
-    <div class="service-card-container"> 
-        <div class="service-card"
-            observeVisibility
-            [debounceTime]="200"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+    <div id="service8" class="service-card-container"> 
+        <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/webdevelopment.jpg"></div>
             <div class="service-body slideleft">
-                <div class="service-header">Web Development</div>
+                <div class="service-header" 
+                    observeVisibility
+                    [debounceTime]="200"
+                    (visible)="onVisible($event)"
+                    (invisible)="onInVisible($event)">Web Development</div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien imperdiet maximus.
                     Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a,

@@ -18,11 +18,19 @@
     min-width: 450px;
     left: 2em;
 }
+.header-service {
+    cursor: pointer;
+}
+
+.header-service:hover {
+    transform: scaleX(1.02);
+    font-weight: 400;
+}
+
 .header-text {
-    /* text-align: center; */
     font-weight: 600;
     font-size: 3em;
-    line-height: 2em;
+    line-height: 1em;
     color: white;
     background: linear-gradient(
        to right, 
@@ -48,7 +56,11 @@
     }
 } 
 
-
+.highlight-service-card {
+    background-color: #f6f6f6;
+    transform: scaleX(1.05);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 12px 0px;
+}
 .content {
     padding: 30px;
     max-width: 1170px;
@@ -69,6 +81,7 @@
     grid-template-columns: 200px 1fr;
     gap: 3em;
 }
+
 .service-header {
     font-weight: 400;
     font-size: 2em;
