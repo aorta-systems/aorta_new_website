@@ -13,9 +13,11 @@ app.post('/sendmail', (req, res) => {
     console.log("request came");
     let email = req.body;
 
-    sendMail(email, info => {
-        res.send(info);
-    });
+
+    res.send(email);
+    // sendMail(email, info => {
+    //     res.send(info);
+    // });
 });
 
 app.get('/*', function(req, res, next) {
