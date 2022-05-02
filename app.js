@@ -10,10 +10,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
 app.post('/sendmail', (req, res) => {
-    console.log("request came");
+    console.log("sendmail func");
     let email = req.body;
 
-    // res.send(email);
     sendMail(email, info => {
         console.log("email");
         res.send(info);
@@ -44,11 +43,10 @@ async function sendMail(email, callback) {
       to: "aleksei@aortasystems.com", // list of receivers
       subject: "AORTA SITE MESSAGE", // Subject line
       html: `
-        <p><strong>Name: </strong> ${email.name}</p>
-        <p><strong>Email: </strong> ${email.email}</p>
-        <p><strong>Phone: </strong> ${email.phone}</p>
-        <h3>Message</h3>
-        <p>${email.message}</p>
+        <p><strong>Name:&nbsp;</strong> ${email.name}</p>
+        <p><strong>Email:&nbsp;</strong> ${email.email}</p>
+        <p><strong>Phone:&nbsp;</strong> ${email.phone}</p>
+        <div><strong>Message:&nbsp;</strong>${email.message}</div>
       `
     };
     let info = await transporter.sendMail(mailOptions);

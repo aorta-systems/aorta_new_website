@@ -59,7 +59,7 @@ export class ContactsPageComponent implements OnInit {
 
     this.http.post('/sendmail', email).subscribe(
       data => {
-        console.log(data)
+        // console.log(data)
       },
       err => {
         console.error(err);
