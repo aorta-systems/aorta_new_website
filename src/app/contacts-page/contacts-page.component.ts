@@ -54,7 +54,7 @@ export class ContactsPageComponent implements OnInit {
       message : this.messageFormControl.value
     };
 
-
+    console.log(email);
     this.http.post('/sendEmail', email).subscribe(
       data => {
         console.log('********')

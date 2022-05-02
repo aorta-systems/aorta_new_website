@@ -1,11 +1,12 @@
 const express = require("express");
 var port = process.env.PORT || 3000;
 // const cors = require("cors");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 // const nodemailer = require("nodemailer");
 
 const app = express();
 
+app.use(bodyParser.json());
 app.use(express.static(__dirname));
 app.all('/*', function(req, res, next) {
     res.sendFile('index.html', { root: __dirname });
