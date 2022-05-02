@@ -8,13 +8,6 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
-app.get('/*', function(req, res, next) {
-    res.sendFile('index.html', { root: __dirname });
-});
-
-app.listen(port, () => {
-    console.log("The server started on port:" + port);
-});
 
 app.post("/sendmail", (req, res) => {
     console.log("request came");
@@ -24,6 +17,16 @@ app.post("/sendmail", (req, res) => {
         res.send(info);
     });
 });
+
+app.all('/*', function(req, res, next) {
+    res.sendFile('index.html', { root: __dirname });
+});
+
+app.listen(port, () => {
+    console.log("The server started on port:" + port);
+});
+
+
 
 
 async function sendMail(user, callback) {
