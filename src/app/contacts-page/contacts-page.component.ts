@@ -10,6 +10,7 @@ import { HttpClient } from "@angular/common/http";
 export class ContactsPageComponent implements OnInit {
 
   loading = false;
+  messageSent = false;
   nameFormControl    = new FormControl("", [ Validators.required ]);
   emailFormControl   = new FormControl("", [ Validators.required, Validators.email ]);
   phoneFormControl   = new FormControl("", [ ]);
@@ -54,13 +55,13 @@ export class ContactsPageComponent implements OnInit {
       message : this.messageFormControl.value
     };
 
-    console.log(email);
+    this.messageSent = true;
+
     this.http.post('/sendmail', email).subscribe(
       data => {
-        console.log('********')
+        console.log(data)
       },
       err => {
-        console.error('error ********');
         console.error(err);
       },
       () => {

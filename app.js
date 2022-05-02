@@ -44,14 +44,11 @@ async function sendMail(email, callback) {
       to: "aleksei@aortasystems.com", // list of receivers
       subject: "AORTA SITE MESSAGE", // Subject line
       html: `
-        <h3>User name: </h3><br>
-        <h4>${email.name}</h4><br>
-        <h3>Email</h3><br>
-        <h4>${email.email}</h4><br>
-        <h3>Phone</h3><br>
-        <h4>${email.phone}</h4><br>
-        <h3>Message</h3><br>
-        <h4>${email.message}</h4><br>
+        <p><strong>Name: </strong> ${email.name}</p>
+        <p><strong>Email: </strong> ${email.email}</p>
+        <p><strong>Phone: </strong> ${email.phone}</p>
+        <h3>Message</h3>
+        <p>${email.message}</p>
       `
     };
     let info = await transporter.sendMail(mailOptions);

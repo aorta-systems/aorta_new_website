@@ -41,7 +41,15 @@
 
 <section class="content">
   <div class="container">
-    <div>
+
+
+    <div *ngIf="messageSent === true">
+      <div class="info text-align-middle">
+        Thank you .... text
+      </div>
+    </div>
+
+    <div *ngIf="messageSent === false">
       <div class="info text-align-middle">
         Tell us a little about yourself and we’ll get right back to you
       </div>
@@ -94,7 +102,7 @@
           <button mat-stroked-button 
               color="primary" 
               class="button-style" 
-              [disabled]="emailFormControl.invalid || nameFormControl.invalid || messageFormControl.invalid"
+              [disabled]="emailFormControl.invalid || nameFormControl.invalid || messageFormControl.invalid || loading"
               (click)="sendEmail()">
               Send
           </button>
