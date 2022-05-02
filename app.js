@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
-app.post("/sendmail", (req, res) => {
+app.post('/sendmail', (req, res) => {
     console.log("request came");
     let email = req.body;
 
@@ -18,7 +18,7 @@ app.post("/sendmail", (req, res) => {
     });
 });
 
-app.all('/*', function(req, res, next) {
+app.get('/*', function(req, res, next) {
     res.sendFile('index.html', { root: __dirname });
 });
 
