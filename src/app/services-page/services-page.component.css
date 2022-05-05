@@ -18,7 +18,34 @@
     min-width: 450px;
     left: 2em;
 }
+
+.list-of-services div:nth-child(1) {
+    animation: slideright 0.6s 0.3s forwards;
+}
+.list-of-services div:nth-child(2) {
+    animation: slideright 0.6s 0.4s forwards;
+}
+.list-of-services div:nth-child(3) {
+    animation: slideright 0.6s 0.5s forwards;
+}
+.list-of-services div:nth-child(4) {
+    animation: slideright 0.6s 0.6s forwards;
+}
+.list-of-services div:nth-child(5) {
+    animation: slideright 0.6s 0.7s forwards;
+}
+.list-of-services div:nth-child(6) {
+    animation: slideright 0.6s 0.8s forwards;
+}
+.list-of-services div:nth-child(7) {
+    animation: slideright 0.6s 0.9s forwards;
+}
+.list-of-services div:nth-child(8) {
+    animation: slideright 0.8s 1.0s forwards;
+}
+
 .header-service {
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -28,10 +55,11 @@
 }
 
 .header-text {
-    font-weight: 600;
-    font-size: 3em;
+    font-weight: 500;
+    font-size: 3.5em;
+    letter-spacing: .2rem;
     line-height: 1em;
-    color: white;
+    color: #dbdbdb;
     background: linear-gradient(
        to right, 
        hsl(0, 90%, 100%) 0%,
@@ -40,7 +68,7 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 4s infinite linear;
+    animation: shine 8s infinite linear;
 }
 .under-header-text {
     font-size: 1.2rem;
@@ -84,12 +112,15 @@
 
 .service-header {
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.2em;
     padding-bottom: 0.5em;
 }
 .service-body {
     text-align: justify;
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1.2em;
 }
 .service-logo {
     align-self: center;

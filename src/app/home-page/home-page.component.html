@@ -35,7 +35,6 @@
 </section>
 
 <section style="
-    background-color: #ca2026;
     background-color: #f6f6f6;
     color: black; 
     padding: 2em;
@@ -46,16 +45,15 @@
         min-height:600px; 
         display: flex;  
         flex-direction: column;
-        justify-content: center; 
+        justify-content: start; 
         align-items: center;
-        padding: 6em 2em;
+        padding: 3em 2em;
          position: relative; "
     >
         <div class="slideright text-align-middle" style="
                 font-size: 2.5em;
                 padding: 1.5rem;
-                color: #353c4a;
-                align-self: center;"
+                color: #353c4a;"
                 observeVisibility
                 [debounceTime]="300"
                 (visible)="onVisible($event)"
@@ -99,13 +97,18 @@
 
 <section class="" 
          style="
-             background-color: #444444;
+             background-color: rgb(87, 87, 87);
              color: black; 
              position: relative;
-             padding: 2em 4em;
-             display: grid; 
-             grid-template-columns: 1fr;">
-    <div class="slidetop" style="font-size: 3.5em;font-weight: 500; color: #f6f6f6; margin: auto; padding: 1.5em 0em;"
+             padding: 2em;
+             height: 350px;
+             display: flex;
+             justify-content: center;
+            align-items: center">
+    <div class="slidetop" style="
+    font-size: 3.5em; 
+    font-weight: 400;
+    color: #f6f6f6; "
             observeVisibility
             [debounceTime]="400"
             (visible)="onVisible($event)"
@@ -114,26 +117,20 @@
         <div>OUR TECHNOLOGIES</div>
     </div>
     <div style="color: #dddcdc88; font-weight: 700; font-size: 1.5em;">
-        <img height="65" class="animated-logo-type1" src="assets/images/technologies/net_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 50%; left: 79%; border-radius: 50%;" >
-
-        <img height="55" class="animated-logo-type2" src="assets/images/technologies/html_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 25%; left: 5%; border-radius: 50%;" >
-
+        <img height="75" class="animated-logo-type1" src="assets/images/technologies/net_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 50%; left: 79%; border-radius: 50%;" >
+        <img height="65" class="animated-logo-type2" src="assets/images/technologies/html_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 25%; left: 5%; border-radius: 50%;" >
         <img height="70" class="animated-logo-type3" src="assets/images/technologies/js_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 10%; position: absolute; top: 65%; left: 15%; border-radius: 50%;" >
-
         <img height="60" class="animated-logo-type4" src="assets/images/technologies/ios_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top: 10%; left: 25%; border-radius: 50%;" >
-
-        <img height="80" class="animated-logo-type1" src="assets/images/technologies/salesforce_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 28%; border-radius: 50%;" >
-
-        <img height="45" class="animated-logo-type2" src="assets/images/technologies/android_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 65%; border-radius: 50%;" >
-
-        <img height="55" class="animated-logo-type3" src="assets/images/technologies/css_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:28%; left: 70%; border-radius: 50%;" >
+        <img height="100" class="animated-logo-type1" src="assets/images/technologies/salesforce_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 28%; border-radius: 50%;" >
+        <img height="65" class="animated-logo-type2" src="assets/images/technologies/android_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 65%; border-radius: 50%;" >
+        <img height="75" class="animated-logo-type3" src="assets/images/technologies/css_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:28%; left: 70%; border-radius: 50%;" >
     </div>
 
 </section>
 
-<section class="" 
-         style="
-             background-image: url('/assets/images/technologies/background-technology.jpg');
+<section style="
+             /* background-image: url('/assets/images/technologies/background-technology.jpg'); */
+             background-color: #f6f6f6;
              background-repeat: no-repeat;
              background-size: cover;
              color: black; 
@@ -142,56 +139,50 @@
              justify-items: center;
              grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
              grid-gap: 80px;
-            ">
+        ">
+
+
+
+
     <div class="card"
-            observeVisibility
-            [debounceTime]="300"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
-            
-         
-            <div class="card-side front">
-                <div class="front-content">WEB</div>
+        observeVisibility
+        [debounceTime]="300"
+        (visible)="onVisible($event)"
+        (invisible)="onInVisible($event)">
+
+        <div class="card-side front">
+            <div class="front-content">WEB</div>
+        </div>
+        <div class="card-side back">
+            <div class="card__image card__image--web"></div>
+            <div class="card__content">
+                <div class="card-header">WEB</div>
+                <p class="card-content">
+                        Make an impact with modern Web Development services designed to grow your business. 
+                        We can turn your ideas into reality by building custom websites or web solutions from the ground up!
+                </p>
             </div>
-            <div class="card-side back">
-                <div class="card-header">Web</div>
-        
-                <div class="card-content">
-                    Request elegant and functional solutions (portals, ecommerce platforms etc.). Using Ruby on Rails,
-                    AngularJS, NodeJS, ReactJS and more, we can bring into reality every idea that you’ve got!
-                </div>
-    
-                <div class="card-footer">
-                    <img src="assets/images/technologies/angular.svg" >
-                    <img src="assets/images/technologies/react.svg" >
-                    <img src="assets/images/technologies/heroku.svg">
-                    <img src="assets/images/technologies/java.png">
-                </div>
-    
-            </div>  
+        </div>  
     </div>
-        
+
     <div class="card"
         observeVisibility
         [debounceTime]="600"
         (visible)="onVisible($event)"
         (invisible)="onInVisible($event)">
 
-    
         <div class="card-side front">
             <div class="front-content">SALESFORCE</div>
         </div>
         <div class="card-side back">
-            <div class="card-header">Salesforce</div>
-        
-            <div class="card-content">
-                Experience all powerful features of lead cloud enterprise platform Salesforce.com with real professionals from our company - Platinum SFDC Partner!
-            </div>
-
-            <div class="card-footer">
-                <img src="assets/images/technologies/servicecloud_logo.png">
-                <img src="assets/images/technologies/marketing-cloud.png">
-                <img src="assets/images/technologies/salesforce-com.png">
+            <div class="card__image card__image--salesforce"></div>
+            <div class="card__content">
+                <div class="card-header">SALESFORCE</div>
+                <p class="card-content">
+                    Our Team of Certified Salesforce Experts can help you align on a vision, 
+                    push the boundaries of latest & greatest technology in your implementation, 
+                    and unlock more value from Salesforce! 
+                </p>
             </div>
         </div>  
     </div>
@@ -202,20 +193,46 @@
         (visible)="onVisible($event)"
         (invisible)="onInVisible($event)">
 
-    <div class="card-side front">
-        <div class="front-content">MOBILE</div>
+        <div class="card-side front">
+            <div class="front-content">MOBILE</div>
+        </div>
+        <div class="card-side back">
+            <div class="card__image card__image--mobile"></div>
+            <div class="card__content">
+                <div class="card-header">MOBILE</div>
+                <p class="card-content">
+                    Reinforce your business with Mobile Solutions! 
+                    We offer End-to-End Mobile App Development Services for iOS,
+                    Android and Cross-platform! 
+                </p>
+            </div>
+        </div>  
     </div>
-    <div class="card-side back">
-        <div class="card-header">Mobile</div>
-        
-        <div class="card-content">
-            Reinforce your business with mobile solutions! By designing right architecture or mobile extension we’ll help you to manage various processes with appropriate mobile app.
-        </div>
+</section>
 
-        <div class="card-footer">
-            <img src="assets/images/technologies/salesforce_mobile.png">
-            <img src="assets/images/technologies/mobile.png">
+
+
+
+
+
+<section class="" 
+         style="
+             background-color:#033a68;
+             color: black; 
+             position: relative;
+             padding: 2em 4em;
+             display: grid; 
+             grid-template-columns: 1fr;">
+    <div class="" style="margin: auto; height: 1000px;" >
+        <div class="slidetop" style="font-size: 3.5em;font-weight: 400; color: #f6f6f6; line-height: 1.5em;"
+            observeVisibility
+            [debounceTime]="400"
+            (visible)="onVisible($event)"
+            (invisible)="onInVisible($event)"
+        >OUR TEAM</div>
+
+        <div>
+                
         </div>
-    </div>  
-</div>
+    </div>
 </section>

@@ -189,16 +189,16 @@ transition-duration: .3s;
 }
 
 .slideright {
-opacity: 0;
-animation: fade-out-right .3s ease forwards;
+  opacity: 0;
+  animation: fade-out-right .3s ease forwards;
 }
 
 .slidetop {
-opacity: 0;
-animation: fade-out-top .3s ease forwards;
+  opacity: 0;
+  animation: fade-out-top .3s ease forwards;
 }
 .slidetop.active {
-animation: slidetop .3s ease forwards;
+  animation: slidetop .3s ease forwards;
 }
 
 .active .slideright, .slideright.active {
@@ -303,7 +303,7 @@ animation: slidetop .3s ease forwards;
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(-10px, 7px);
+    transform: translate(-14px, 9px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -315,7 +315,7 @@ animation: slidetop .3s ease forwards;
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(8px, -10px);
+    transform: translate(18px, -20px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -327,7 +327,7 @@ animation: slidetop .3s ease forwards;
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(-5px, -2px);
+    transform: translate(-7px, -3px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -339,7 +339,7 @@ animation: slidetop .3s ease forwards;
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(-8px, 11px);
+    transform: translate(-18px, 21px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -349,8 +349,46 @@ animation: slidetop .3s ease forwards;
 .card {
   max-width:450px;
   position: relative;
-  height: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 70%;
+}
+.card .card__image:hover {
+  filter: contrast(100%);
+}
+.card__image--web {
+  background-image: url('/assets/images/homepage/web.png');
+}
+.card__image--salesforce {
+  background-image: url('/assets/images/homepage/salesforce.jpg');
+}
+.card__image--mobile {
+  background-image: url('/assets/images/homepage/mobile.jpg');
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 .card-side {
   transition: all 0.8s ease;
   backface-visibility: hidden;
@@ -358,53 +396,45 @@ animation: slidetop .3s ease forwards;
 
 .card-side.front {
   position: absolute;
-  background-color: #26405277;
+  /* background-color: #26405277; */
+  /* background-color: rgb(119, 119, 119); */
+  background-image: url('/assets/images/homepage/card-background.jpg');
+  filter: contrast(70%);
+  background-repeat: no-repeat;
+  background-size: cover; 
   font-size: 2em; 
-  color: #f6f6f6;
+  /* color: #f6f6f6; */
+  color: #fff;
   font-weight: 600;
-  border-radius: 15px;
+  border-radius: 20px;
   height: 100%;
   width: 100%;
 }
 
 .card-side.back {
+  overflow:hidden; 
   box-sizing: border-box;
-  padding: 2em;
+  /* padding: 2em; */
   transform: rotateY(-180deg);
-  background-color: #f6f6f6;
   height: 100%;
-  display: grid; 
-  grid-template-rows: auto 1fr auto;
-  row-gap: 2em;
-  border-radius: 15px;
-  background-color: #f6f6f6;
-}
-
-.card-footer {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-footer img{
-  flex: 0;
-  padding: 1em;
-  height: 70px;
-  object-fit: cover;
+  /* display: grid; 
+  grid-template-rows: auto auto auto auto;
+  row-gap: 1em; */
+  border-radius: 20px;
+  background-color: white;
 }
 
 .card-side.back .card-content {
   font-size: 1.4em;
-  font-weight: 200;
-  line-height: 1.2em;
+  font-weight: 300;
+  line-height: 1.3em;
   color: #353c4a;;
   text-align: justify; 
 }
 .card-side.back .card-header {
   font-size: 2em; 
   font-weight: 600; 
+  line-height: 1.5em;
   text-align: center;
   color: #353c4a;;
 }
