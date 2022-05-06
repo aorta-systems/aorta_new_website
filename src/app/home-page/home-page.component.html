@@ -34,21 +34,14 @@
     </div>
 </section>
 
-<section style="
-    background-color: #f6f6f6;
-    color: black; 
-    padding: 2em;
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-gap: 2em;"
->    <div style="
+<section class="about-company-section">    <div style="
         min-height:600px; 
         display: flex;  
         flex-direction: column;
         justify-content: start; 
         align-items: center;
         padding: 3em 2em;
-         position: relative; "
+        position: relative; "
     >
         <div class="slideright text-align-middle" style="
                 font-size: 2.5em;
@@ -104,11 +97,11 @@
              height: 350px;
              display: flex;
              justify-content: center;
-            align-items: center">
+             align-items: center">
     <div class="slidetop" style="
-    font-size: 3.5em; 
-    font-weight: 400;
-    color: #f6f6f6; "
+                                    font-size: 3.5em; 
+                                    font-weight: 400;
+                                    color: #f6f6f6; "
             observeVisibility
             [debounceTime]="400"
             (visible)="onVisible($event)"
@@ -116,14 +109,14 @@
     >
         <div>OUR TECHNOLOGIES</div>
     </div>
-    <div style="color: #dddcdc88; font-weight: 700; font-size: 1.5em;">
-        <img height="75" class="animated-logo-type1" src="assets/images/technologies/net_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 50%; left: 79%; border-radius: 50%;" >
-        <img height="65" class="animated-logo-type2" src="assets/images/technologies/html_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 30%; position: absolute; top: 25%; left: 5%; border-radius: 50%;" >
-        <img height="70" class="animated-logo-type3" src="assets/images/technologies/js_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 10%; position: absolute; top: 65%; left: 15%; border-radius: 50%;" >
-        <img height="60" class="animated-logo-type4" src="assets/images/technologies/ios_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top: 10%; left: 25%; border-radius: 50%;" >
-        <img height="100" class="animated-logo-type1" src="assets/images/technologies/salesforce_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 28%; border-radius: 50%;" >
-        <img height="65" class="animated-logo-type2" src="assets/images/technologies/android_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:65%; left: 65%; border-radius: 50%;" >
-        <img height="75" class="animated-logo-type3" src="assets/images/technologies/css_logo.png" style="border-radius: 50%; object-fit: cover; opacity: 20%; position: absolute; top:28%; left: 70%; border-radius: 50%;" >
+    <div>
+        <img height="85" class="animated-logo-type1" src="assets/images/homepage/net_logo.png" style="opacity: 30%; position: absolute; top: 50%; left: 79%;" >
+        <img height="75" class="animated-logo-type2" src="assets/images/homepage/html_logo.png" style="opacity: 30%; position: absolute; top: 25%; left: 5%;" >
+        <img height="70" class="animated-logo-type3" src="assets/images/homepage/js_logo.png" style="opacity: 10%; position: absolute; top: 65%; left: 15%;" >
+        <img height="80" class="animated-logo-type4" src="assets/images/homepage/ios_logo.png" style="opacity: 20%; position: absolute; top: 10%; left: 25%;" >
+        <img height="100" class="animated-logo-type1" src="assets/images/homepage/salesforce_logo.png" style="opacity: 20%; position: absolute; top:65%; left: 28%;" >
+        <img height="70" class="animated-logo-type2" src="assets/images/homepage/android_logo.png" style="opacity: 20%; position: absolute; top:65%; left: 65%;" >
+        <img height="85" class="animated-logo-type3" src="assets/images/homepage/css_logo.png" style="opacity: 20%; position: absolute; top:28%; left: 70%;" >
     </div>
 
 </section>
@@ -210,29 +203,79 @@
     </div>
 </section>
 
-
-
-
-
-
-<section class="" 
-         style="
+<section class=""  style="
              background-color:#033a68;
              color: black; 
              position: relative;
-             padding: 2em 4em;
-             display: grid; 
-             grid-template-columns: 1fr;">
-    <div class="" style="margin: auto; height: 1000px;" >
-        <div class="slidetop" style="font-size: 3.5em;font-weight: 400; color: #f6f6f6; line-height: 1.5em;"
+             padding: 2em 4em 4em 4em;
+             height: 700px; 
+                display: grid;
+                grid-template-areas:
+                    'header   header   header    header    header'
+                    'pictures pictures desc      desc      desc'
+                    'pictures pictures employes1 employes2 employes3';
+                gap: 1em 4em;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: 100px 1fr 1fr;
+             ">
+
+        <div class="slidetop" style="font-size: 3.5em; justify-self: center; font-weight: 400; color: #f6f6f6; line-height: 1.5em; grid-area: header;"
             observeVisibility
             [debounceTime]="400"
             (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)"
-        >OUR TEAM</div>
+            (invisible)="onInVisible($event)">OUR TEAM</div>
+ 
 
-        <div>
-                
+        <div style="grid-area: pictures; justify-self: center; align-self: center;">
+            <img style="max-width: 100%;" src="assets/images/homepage/team1.jpg"  >
         </div>
-    </div>
+
+        <!-- <div style="grid-area: two; justify-self: center; align-self: center; font-size: 1.6em; text-align: center; font-weight: 600; color: #f5f6fa; line-height: 1.1em;">
+            <img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"  >
+            <p>PARTNER</p>
+            <p style="font-weight: 400;">SINCE 2013</p>
+        </div> -->
+
+        <!-- <img style="grid-area: logo1; justify-self: center; align-self: center; max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"  >
+        <div style="grid-area: desc1; justify-self: start; align-self: center; font-size: 1.6em; text-align: center; font-weight: 600; color: #f5f6fa; line-height: 1.1em;">
+            <img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"  >
+            <p>PARTNER SINCE 2013</p>
+        </div> -->
+
+        <!-- <img style="grid-area: logo2; justify-self: center; align-self: center; max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"  > -->
+        <!-- <div style="grid-area: desc; justify-self: start; align-self: center; font-size: 1.6em; text-align: center; font-weight: 600; color: #f5f6fa; line-height: 1.1em;">
+            <p>PARTNER SINCE 2013 Salesforce ISV Partner and Cloud Alliance Partner</p>
+        </div> -->
+
+        <div style="grid-area: desc; justify-self: center; align-self: center; font-size: 1.6em; text-align: center; font-weight: 400; color: #f5f6fa; line-height: 1.1em; display: flex; gap:2em;">
+            <div>
+                <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+                <p>Salesforce ISV Partner</p>
+            </div>
+
+            <div>
+                <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+                <p>Cloud Alliance Partner</p>
+            </div>
+        </div>
+
+
+        <div style="grid-area: employes1; justify-self: center; align-self: center; font-size: 1.6em; text-align: center; font-weight: 400; color: #f5f6fa; line-height: 1.1em;">
+            <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+            <p>100+</p>
+            <p>Team Members</p>
+        </div>
+
+        <div style="grid-area: employes2; justify-self: center; align-self: center; font-size: 1.6em; text-align: center; font-weight: 400; color: #f5f6fa; line-height: 1.1em;">
+            <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+            <p>50+</p>
+            <p>Worldwide Customers</p>
+        </div>
+
+        <div style="grid-area: employes3; justify-self: center; align-self: center; font-size: 1.6em; text-align: center; font-weight: 400; color: #f5f6fa; line-height: 1.1em;">
+            <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+            <p>25+</p>
+            <p>Salesforce Certifications</p>
+        </div>
+
 </section>

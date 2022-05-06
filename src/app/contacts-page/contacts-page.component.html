@@ -26,13 +26,13 @@
        [debounceTime]="500"
        (visible)="onVisible($event)"
        (invisible)="onInVisible($event)">
-    <a href="https://www.facebook.com/AortaSystems">
+    <a href="https://www.facebook.com/AortaSystems" target="_blank">
       <img src="assets/images/social/facebook.png" height="50">
     </a>
-    <a href="https://www.linkedin.com/company/aorta-systems-group">
+    <a href="https://www.linkedin.com/company/aorta-systems-group" target="_blank">
       <img src="assets/images/social/linkedin.png" height="50">
     </a>
-    <a href="https://twitter.com/AortaSystems">
+    <a href="https://twitter.com/AortaSystems" target="_blank">
       <img src="assets/images/social/twitter.png" height="50">
     </a>
   </div>
@@ -46,9 +46,8 @@
     <div *ngIf="messageSent === true">
       <div class="info">
         Thank you for contacting us! We’ve got your message. 
-        The response will be sent to the email address you’ve indicated within 48 hours!
-        <p class="text-align-middle">In the meantime follow us on
-           <strong>  <a href="https://www.linkedin.com/company/aorta-systems-group" style="text-decoration: none; color: inherit;">LinkedIn!</a></strong> </p>
+        The response will be sent to the email address you’ve indicated within 48 hours! In the meantime follow us on
+           <strong><a href="https://www.linkedin.com/company/aorta-systems-group" target="_blank" style="text-decoration: none; color: inherit;">LinkedIn!</a></strong>
       </div>
     </div>
 

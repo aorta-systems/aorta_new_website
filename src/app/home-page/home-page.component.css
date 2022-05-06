@@ -3,36 +3,14 @@
   flex-flow: column;
 }
 
-.about-company-content {
-position: relative;
-padding: 5em 0em;
-max-width: 1170px;
-width: 100%;
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-gap: 1em;
-margin-left: auto;
-margin-right: auto;
+.about-company-section {
+  background-color: #f6f6f6;
+  color: black; 
+  padding: 2em;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 2em;
 } 
-
-.techlogogie-list {
-padding-top: 2em;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-gap: 2em;
-justify-content: center;
-justify-items: center;
-text-align: center;
-}
-
-
-section.one-column {
-  padding-top: 5em;
-  max-width: 1170px;
-  width: 100%;
-  align-self: center;
-} 
-
 .welcome-screen {
   position: relative;
   background-image: url('/assets/images/homeScreen.jpg');
@@ -40,7 +18,6 @@ section.one-column {
   background-size: cover; 
   min-height: calc(100vh);
 }
-
 .header-text-section {
   color: #fff;
   display: flex;
@@ -49,23 +26,19 @@ section.one-column {
   justify-content: center;
   opacity: 0;
 }
-
 .header-welcome-text {
   padding: 2rem;
   font-size: 4em;
   font-weight: 600;
 }
-
 .content-welcome-text {
-padding: 0.5rem;
-font-size: 1.5em;
-font-weight: 400;
+  padding: 0.5rem;
+  font-size: 1.5em;
+  font-weight: 400;
 }
-
 .text-align-middle {
-text-align: center;
+  text-align: center;
 }
-
 .header-text {
   font-size: 2em;
   padding: 1.5rem;
@@ -73,13 +46,6 @@ text-align: center;
   color: #353c4a;
   align-self: center;
 }
-
-.default-text {
-font-size: 1.2em;
-font-weight: 200;
-text-align: justify;
-}
-
 .header-welcome-content {
   right: 5em;
   position: absolute;
@@ -88,33 +54,20 @@ text-align: justify;
   transform: translateY(-50%);
 }
 
-.salesforce-logo {
-  position:absolute;
-  right: 3em;
-  top: 3em;
-  padding-left: 3em;
-  height: 100px;
-  opacity: 0;
-  animation: fade-in 0.6s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
 .contact-us-btn {
   position: absolute;
   bottom: 0%;
   padding: 4em;
 }
-
 .btn {
-font-size: 2.5rem;
-color: #fff;
-padding: 15px 30px;
-opacity: 0;
-font-weight: 300;
-animation: slideright .5s ease-out forwards;
-transition-duration: .3s;
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 15px 30px;
+  opacity: 0;
+  font-weight: 300;
+  animation: slideright .5s ease-out forwards;
+  transition-duration: .3s;
 }
-
-/* TEXT ANIMATION*/
 .text-animation.active {
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -131,7 +84,6 @@ transition-duration: .3s;
   opacity: 0;
   filter: blur(4px);
 }
-
 .text-animation.active span:nth-child(1) {
   animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
@@ -187,12 +139,10 @@ transition-duration: .3s;
   opacity: 0;
   animation: fade-out-left .3s ease forwards;
 }
-
 .slideright {
   opacity: 0;
   animation: fade-out-right .3s ease forwards;
 }
-
 .slidetop {
   opacity: 0;
   animation: fade-out-top .3s ease forwards;
@@ -200,7 +150,6 @@ transition-duration: .3s;
 .slidetop.active {
   animation: slidetop .3s ease forwards;
 }
-
 .active .slideright, .slideright.active {
   animation: slideright .3s ease forwards;
 }
@@ -218,8 +167,6 @@ transition-duration: .3s;
      transform: translateX(-20px);
   }
 } 
-
-
 @keyframes fade-out-top {
   0% {
      opacity:1;
@@ -245,7 +192,6 @@ transition-duration: .3s;
      transform: translateX(100px);
   }
 } 
-
 @keyframes slideright {
   0% {
     opacity:0;
@@ -396,14 +342,11 @@ transition-duration: .3s;
 
 .card-side.front {
   position: absolute;
-  /* background-color: #26405277; */
-  /* background-color: rgb(119, 119, 119); */
   background-image: url('/assets/images/homepage/card-background.jpg');
   filter: contrast(70%);
   background-repeat: no-repeat;
   background-size: cover; 
   font-size: 2em; 
-  /* color: #f6f6f6; */
   color: #fff;
   font-weight: 600;
   border-radius: 20px;
@@ -414,12 +357,8 @@ transition-duration: .3s;
 .card-side.back {
   overflow:hidden; 
   box-sizing: border-box;
-  /* padding: 2em; */
   transform: rotateY(-180deg);
   height: 100%;
-  /* display: grid; 
-  grid-template-rows: auto auto auto auto;
-  row-gap: 1em; */
   border-radius: 20px;
   background-color: white;
 }
@@ -445,11 +384,9 @@ transition-duration: .3s;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .card.active .card-side.front {
   transform: rotateY(180deg);
 }
-
 .card.active .card-side.back {
   transform: rotateY(0deg);
 } 
