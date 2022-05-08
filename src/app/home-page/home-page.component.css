@@ -143,13 +143,25 @@
   opacity: 0;
   animation: fade-out-right .3s ease forwards;
 }
-.slidetop {
-  opacity: 0;
+.slidetop, .slidetop1, .slidetop2, .slidetop3 {
+  opacity:0;
   animation: fade-out-top .3s ease forwards;
 }
+
 .slidetop.active {
-  animation: slidetop .3s ease forwards;
+  animation: slidetop .5s ease forwards;
 }
+
+.active .slidetop1 {
+  animation: slidetop .3s .5s ease forwards;
+}
+.active .slidetop2 {
+  animation: slidetop .6s .5s ease forwards;
+}
+.active .slidetop3 {
+  animation: slidetop 1.0s .5s ease forwards;
+}
+
 .active .slideright, .slideright.active {
   animation: slideright .3s ease forwards;
 }
@@ -174,7 +186,7 @@
   }
   99% {
      opacity:0;
-     transform: translateY(-50px);
+     transform: translateY(-120px);
   }
   100% {
     opacity:0;
@@ -219,8 +231,12 @@
 
 @keyframes slidetop {
   0% {
+    opacity:0;
+    transform: translateY(0px);
+  }
+  1% {
      opacity:0;
-     transform: translateY(-50px);
+     transform: translateY(-100px);
   }
   100% {
      opacity:1;
@@ -293,9 +309,9 @@
 }
 
 .card {
-  max-width:450px;
+  max-width:480px;
   position: relative;
-  height: 550px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -305,7 +321,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: contrast(70%);
+  filter: contrast(60%);
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
@@ -319,13 +335,13 @@
   filter: contrast(100%);
 }
 .card__image--web {
-  background-image: url('/assets/images/homepage/web.png');
+  background-image: url('/assets/images/homepage/webCard.jpeg');
 }
 .card__image--salesforce {
-  background-image: url('/assets/images/homepage/salesforce.jpg');
+  background-image: url('/assets/images/homepage/salesforceCard.png');
 }
 .card__image--mobile {
-  background-image: url('/assets/images/homepage/mobile.jpg');
+  background-image: url('/assets/images/homepage/mobileCard.jpeg');
 }
 
 .card__content {
@@ -349,7 +365,7 @@
   font-size: 2em; 
   color: #fff;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 8px;
   height: 100%;
   width: 100%;
 }
@@ -359,10 +375,9 @@
   box-sizing: border-box;
   transform: rotateY(-180deg);
   height: 100%;
-  border-radius: 20px;
+  border-radius: 8px;
   background-color: white;
 }
-
 .card-side.back .card-content {
   font-size: 1.4em;
   font-weight: 300;
@@ -377,7 +392,6 @@
   text-align: center;
   color: #353c4a;;
 }
-
 .front-content {
   position: absolute;
   top: 50%;
