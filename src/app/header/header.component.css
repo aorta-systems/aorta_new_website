@@ -23,6 +23,22 @@ nav.header-menu {
     display: flex;
     justify-content: flex-end;
 }
+
+.mobile-screen {
+    visibility: hidden;
+
+}
+
+@media screen and (max-width: 784px) {
+    .wide-screen {
+      display: none;
+      visibility: hidden;
+    }
+    .mobile-screen {
+        visibility: visible;
+    }
+}
+
 nav.header-menu ul {
     display: flex;
     list-style: none;
@@ -44,4 +60,7 @@ a.active {
 }
 a:hover {
     color: #23b0e9;
+}
+.mat-icon-button{
+    transform: scale(2);
 }

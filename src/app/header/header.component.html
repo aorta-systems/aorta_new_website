@@ -2,25 +2,28 @@
     <div><a routerLink=""><img src="{{headerLogoSrc}}"/></a></div>
     <nav class="header-menu">
         <ul>
-            <li>
+            <li class="wide-screen">
                 <a routerLink="">Home</a>
             </li>
-            <li>
+            <li class="wide-screen">
                 <a routerLink="/services" routerLinkActive="active">Services</a>
             </li>
-            <li>
+            <li class="wide-screen">
                 <a routerLink="/clients" routerLinkActive="active">Clients</a>
             </li>
-            <li>
+            <li class="wide-screen">
                 <a routerLink="/contacts" routerLinkActive="active">Contacts</a>
             </li>
-            <li>
+            <li class="wide-screen">
                 <a href="https://aortasystems.atlassian.net/" target="_blank">Login</a>
+            </li>
+
+            
+            <li class="mobile-screen">
+                <button mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
             </li>
         </ul>
     </nav>
-
-    <!-- <button mat-icon-button >
-        <mat-icon>menu</mat-icon>
-    </button> -->
 </header>

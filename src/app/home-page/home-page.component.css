@@ -5,12 +5,28 @@
 
 .about-company-section {
   background-color: #f6f6f6;
-  color: black; 
+  color: #353c4a;
   padding: 2em;
   display: grid; 
   grid-template-columns: 1fr 1fr; 
   grid-gap: 2em;
 } 
+.about-company-picture {
+  background-image: url('/assets/images/background_about_company.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.technologies-section {
+  background-color: #f6f6f6;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black; 
+  padding: 5em;
+  display: grid; 
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 80px;
+}
 .welcome-screen {
   position: relative;
   background-image: url('/assets/images/homeScreen.jpg');
@@ -27,27 +43,23 @@
   opacity: 0;
 }
 .header-welcome-text {
-  padding: 2rem;
+  line-height: 1.2em;
   font-size: 4em;
   font-weight: 600;
 }
 .content-welcome-text {
-  padding: 0.5rem;
-  font-size: 1.5em;
-  font-weight: 400;
+  max-width: 100vw;
+  line-height: 1.2em;
+  font-size: 2em;
+  font-weight: 600;
+  color: #f5f6fa;
 }
 .text-align-middle {
   text-align: center;
 }
-.header-text {
-  font-size: 2em;
-  padding: 1.5rem;
-  font-weight: 400;
-  color: #353c4a;
-  align-self: center;
-}
 .header-welcome-content {
-  right: 5em;
+  right: 2em;
+  left: 1em;
   position: absolute;
   top: 20%;
   -ms-transform: translateY(-50%);
@@ -56,8 +68,8 @@
 
 .contact-us-btn {
   position: absolute;
-  bottom: 0%;
-  padding: 4em;
+  bottom: 4rem;
+  left: 4rem;
 }
 .btn {
   font-size: 2.5rem;
@@ -73,6 +85,45 @@
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   opacity: 1;
 }
+
+@media screen and (max-width: 784px) {
+  .header-welcome-text {
+    font-size: 2rem;
+  }
+  .content-welcome-text {
+    font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 2rem;
+  }
+  .about-company-section {
+    grid-template-columns: 1fr; 
+  }
+  .about-company-picture {
+    visibility: hidden;
+    display: none;
+  }
+  .technologies-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 920px) and (min-width: 785px) {
+  .header-welcome-text {
+    font-size: 2.5rem;
+  }
+  .content-welcome-text {
+    font-size: 1.5rem;
+  }
+  .about-company-section {
+    grid-template-columns: 1fr; 
+  }
+  .technologies-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 @keyframes scale {
   100% {
     transform: scale(1);
@@ -309,7 +360,7 @@
 }
 
 .card {
-  max-width:480px;
+  max-width:500px;
   position: relative;
   height: 600px;
   display: flex;
