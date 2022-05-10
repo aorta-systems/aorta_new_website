@@ -2,12 +2,12 @@
     <app-header></app-header>
     <div>
         <div class="header-welcome-content">
-            <div class="header-text-section text-animation" 
+            <div class="header-welcome-text-section text-animation" 
                 observeVisibility
                 [debounceTime]="200"
                 (visible)="onVisible($event)"
                 (invisible)="onInVisible($event)">
-                <div class="header-welcome-text">
+                <p class="header-text">
                     <span>All-</span>
                     <span>inclu</span>
                     <span>sive&nbsp;</span>
@@ -15,8 +15,8 @@
                     <span>force&nbsp;</span>
                     <span>serv</span>
                     <span>ices</span> 
-                </div>
-                <div class="content-welcome-text">
+                </p>
+                <p class="content-text">
                     <span>Salesforce &nbsp;</span>
                     <span>Trusted&nbsp;</span>
                     <span>Experts,&nbsp;</span>
@@ -24,7 +24,7 @@
                     <span>&&nbsp;</span>
                     <span>Consulting&nbsp;</span>
                     <span>Partners</span>   
-                </div>  
+                </p>  
             </div>
         </div>
 
@@ -38,40 +38,22 @@
     </div>
 </section>
 
-<section class="about-company-section">   
-    <div style="
-        min-height:600px; 
-        display: flex;  
-        flex-direction: column;
-        justify-content: start; 
-        align-items: center;
-        padding: 0em 2em;
-        position: relative;"
-    >
-        <div class="slideleft text-align-middle" style="
-                font-size: 2.5em;
-                padding: 1.5rem;"
-                observeVisibility
-                [debounceTime]="300"
-                (visible)="onVisible($event)"
-                (invisible)="onInVisible($event)">ABOUT COMPANY</div>
-            <div class="slideright" style=" 
-                    font-size: 1.4em;
-                    font-weight: 200;
-                    line-height: 1.2em;
-                    text-align: justify;"
-            observeVisibility
-            [debounceTime]="300"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)">
+<section class="about-company-section content-text">   
+    <div class="slideleft text-align-middle header-text" style="grid-area: header;"
+         observeVisibility [debounceTime]="300" (visible)="onVisible($event)"(invisible)="onInVisible($event)">
+         ABOUT COMPANY
+    </div>
+        <div class="slideright" style="grid-area: content; text-align: justify;"
+            observeVisibility [debounceTime]="300" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
             development and various Salesforce consulting services from implementation, 
             customization and administration to automation, development, enhancements and 
             integrations. We have a very highly skilled and experienced team – certified 
             Salesforce.com consultants, developers, administrators, QA experts, project managers 
             & business analysts, all of whom are constantly supported by our Salesforce Architects. 
-            <br>
-            <br>    
+        </div>
+        <div class="slideright" style="grid-area: content2; text-align: justify;"
+            observeVisibility  [debounceTime]="350" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
             development and PMBA centers are also located in San Francisco, Utah, Toronto, and 
             across Eastern Europe. The unique combination of the company’s multi-year CRM 
@@ -81,29 +63,24 @@
             relationship we hold within our team and customers.  
         </div>
 
-        <div class="" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; padding-top: 30px; font-size: 1.6em; text-align: center; font-weight: 400; color: #353c4a; line-height: 1.1em;"
-            observeVisibility
-            [debounceTime]="300"
-            (visible)="onVisible($event)"
-            (invisible)="onInVisible($event)"
-        
-        >
-            <div style="padding: 0em 1em" class="slidetop1">
-                <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
-                <p>Salesforce ISV Partner</p>
-            </div>
-    
-            <div style="padding: 0em 1em" class="slidetop2">
-                <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
-                <p>Cloud Alliance Partner</p>
-            </div>
 
-            <div class="slidetop3" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between; padding: 0em 1em">
-                <p>100+ Team Members</p>
-                <p>50+ Worldwide Customers</p>
-                <p>25+ Salesforce Certifications</p>
-            </div>
-        </div>
+    <div class="slidetop" style="grid-area: info1;"
+        observeVisibility [debounceTime]="300" (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        <p><img style="max-width: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+        <p>Salesforce ISV Partner</p>
+    </div>
+
+    <div class="slidetop" style="grid-area: info2;"
+        observeVisibility [debounceTime]="600" (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
+        <p>Cloud Alliance Partner</p>
+    </div>
+
+    <div class="slidetop" style="grid-area: info3; text-align: left; display: flex; flex-direction: column; justify-content: space-between;"
+        observeVisibility [debounceTime]="900" (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        <p>100+ Team Members</p>
+        <p>50+ Worldwide Customers</p>
+        <p>25+ Salesforce Certifications</p>
     </div>
 
     <div class="about-company-picture"></div>
@@ -113,18 +90,13 @@
 <section class="" 
          style="
              background-color: rgb(87, 87, 87);
-             color: black; 
+             color: #f6f6f6; 
              position: relative;
-             padding: 2em;
              height: 350px;
              display: flex;
              justify-content: center;
              align-items: center">
-    <div class="slidetop" 
-            style="
-                font-size: 3.5em; 
-                font-weight: 400;
-                color: #f6f6f6; "
+    <div class="slidetop header-text" 
             observeVisibility
             [debounceTime]="400"
             (visible)="onVisible($event)"
@@ -133,13 +105,13 @@
         <div>OUR TECHNOLOGIES</div>
     </div>
     <div>
-        <img height="85" class="animated-logo-type1" src="assets/images/homepage/net_logo.png" style="opacity: 30%; position: absolute; top: 50%; left: 79%;" >
-        <img height="75" class="animated-logo-type2" src="assets/images/homepage/html_logo.png" style="opacity: 30%; position: absolute; top: 25%; left: 5%;" >
-        <img height="70" class="animated-logo-type3" src="assets/images/homepage/js_logo.png" style="opacity: 10%; position: absolute; top: 65%; left: 15%;" >
-        <img height="80" class="animated-logo-type4" src="assets/images/homepage/ios_logo.png" style="opacity: 20%; position: absolute; top: 10%; left: 25%;" >
-        <img height="100" class="animated-logo-type1" src="assets/images/homepage/salesforce_logo.png" style="opacity: 20%; position: absolute; top:65%; left: 28%;" >
-        <img height="70" class="animated-logo-type2" src="assets/images/homepage/android_logo.png" style="opacity: 20%; position: absolute; top:65%; left: 65%;" >
-        <img height="85" class="animated-logo-type3" src="assets/images/homepage/css_logo.png" style="opacity: 20%; position: absolute; top:28%; left: 70%;" >
+        <img class="tech-logo animated-logo-type1" src="assets/images/homepage/net_logo.png" style="top: 50%; left: 79%;" >
+        <img class="tech-logo animated-logo-type2" src="assets/images/homepage/html_logo.png" style="top: 25%; left: 5%;" >
+        <img class="tech-logo animated-logo-type3" src="assets/images/homepage/js_logo.png" style="top: 65%; left: 15%;" >
+        <img class="tech-logo animated-logo-type4" src="assets/images/homepage/ios_logo.png" style="top: 10%; left: 25%;" >
+        <img class="tech-logo animated-logo-type1" src="assets/images/homepage/salesforce_logo.png" style="top:65%; left: 28%;" >
+        <img class="tech-logo animated-logo-type2" src="assets/images/homepage/android_logo.png" style="top:65%; left: 65%;" >
+        <img class="tech-logo animated-logo-type3" src="assets/images/homepage/css_logo.png" style="top:28%; left: 70%;" >
     </div>
 
 </section>
@@ -152,12 +124,12 @@
         (invisible)="onInVisible($event)">
 
         <div class="card-side front">
-            <div class="front-content">WEB</div>
+            <div class="front-content header-text-medium">WEB</div>
         </div>
         <div class="card-side back">
             <div class="card__image card__image--web"></div>
             <div class="card__content">
-                <div class="card-header">WEB</div>
+                <div class="card-header header-text-medium">WEB</div>
                 <p class="card-content">
                         Make an impact with modern Web Development services designed to grow your business. 
                         We can turn your ideas into reality by building custom websites or web solutions from the ground up!
@@ -173,12 +145,12 @@
         (invisible)="onInVisible($event)">
 
         <div class="card-side front">
-            <div class="front-content">SALESFORCE</div>
+            <div class="front-content header-text-medium">SALESFORCE</div>
         </div>
         <div class="card-side back">
             <div class="card__image card__image--salesforce"></div>
             <div class="card__content">
-                <div class="card-header">SALESFORCE</div>
+                <div class="card-header header-text-medium">SALESFORCE</div>
                 <p class="card-content">
                     Our Team of Certified Salesforce Experts can help you align on a vision, 
                     push the boundaries of latest & greatest technology in your implementation, 
@@ -195,12 +167,12 @@
         (invisible)="onInVisible($event)">
 
         <div class="card-side front">
-            <div class="front-content">MOBILE</div>
+            <div class="front-content header-text-medium">MOBILE</div>
         </div>
         <div class="card-side back">
             <div class="card__image card__image--mobile"></div>
             <div class="card__content">
-                <div class="card-header">MOBILE</div>
+                <div class="card-header header-text-medium">MOBILE</div>
                 <p class="card-content">
                     Reinforce your business with Mobile Solutions! 
                     We offer End-to-End Mobile App Development Services for iOS,
