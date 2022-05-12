@@ -6,7 +6,6 @@
     <div>
         <div class="header-welcome-content">
             <div class="header-welcome-text-section text-animation" observeVisibility [debounceTime]=250 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
-            <!-- <div class="header-welcome-text-section text-animation"> -->
                 <p class="header-text">
                     <span>All-</span>
                     <span>inclu</span>
@@ -62,19 +61,19 @@
 
 
     <div class="info1 slidetop" style="grid-area: info1;"
-        observeVisibility [debounceTime]=300 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        observeVisibility [debounceTime]=600 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
         <p><img style="max-width: 100%;" src="assets/images/homepage/salesforce.svg"></p>
         <p>Salesforce ISV Partner</p>
     </div>
 
     <div class="info2 slidetop" style="grid-area: info2;"
-        observeVisibility [debounceTime]=600 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        observeVisibility [debounceTime]=800 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
         <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
         <p>Cloud Alliance Partner</p>
     </div>
 
     <div class="info1 slidetop" style="grid-area: info3; text-align: left; display: flex; flex-direction: column; justify-content: space-between;"
-        observeVisibility [debounceTime]=900 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        observeVisibility [debounceTime]=1000 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
         <p>100+ Team Members</p>
         <p>50+ Worldwide Customers</p>
         <p>25+ Salesforce Certifications</p>
