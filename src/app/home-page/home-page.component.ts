@@ -19,6 +19,18 @@ export class HomePageComponent implements OnInit {
     }
   }
 
+  onRotareCard(element: HTMLElement) {
+    var card: HTMLElement = element.closest(".card") as HTMLElement;
+    card.classList.add("active");
+  }
+
+  onReturnCard(element: HTMLElement) {
+    var card: HTMLElement = element.closest(".card") as HTMLElement;
+    card.classList.remove("active");
+  }
+
+
+
   onInVisible(element: HTMLElement) {
     element.classList.remove("active");
   }

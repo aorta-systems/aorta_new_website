@@ -120,35 +120,27 @@
 </section>
 
 <section class="technologies-section">
-    <div class="card"
-        observeVisibility
-        [debounceTime]="300"
-        (visible)="onVisible($event)"
-        (invisible)="onInVisible($event)">
-
+    <div class="card">
         <div class="card-side front">
-            <div class="front-content header-text-medium">WEB</div>
+            <div class="front-content header-text-medium" 
+                observeVisibility [debounceTime]="600" (visible)="onRotareCard($event)" (invisible)="onReturnCard($event)">WEB</div>
         </div>
         <div class="card-side back">
             <div class="card__image card__image--web"></div>
             <div class="card__content">
                 <div class="card-header header-text-medium">WEB</div>
                 <p class="card-content">
-                        Make an impact with modern Web Development services designed to grow your business. 
-                        We can turn your ideas into reality by building custom websites or web solutions from the ground up!
+                    Make an impact with modern Web Development services designed to grow your business. 
+                    We can turn your ideas into reality by building custom websites or web solutions from the ground up!
                 </p>
             </div>
         </div>  
     </div>
 
-    <div class="card"
-        observeVisibility
-        [debounceTime]="600"
-        (visible)="onVisible($event)"
-        (invisible)="onInVisible($event)">
-
+    <div class="card">
         <div class="card-side front">
-            <div class="front-content header-text-medium">SALESFORCE</div>
+            <div class="front-content header-text-medium"  
+                observeVisibility [debounceTime]="450" (visible)="onRotareCard($event)" (invisible)="onReturnCard($event)">SALESFORCE</div>
         </div>
         <div class="card-side back">
             <div class="card__image card__image--salesforce"></div>
@@ -163,14 +155,10 @@
         </div>  
     </div>
 
-    <div class="card"
-        observeVisibility
-        [debounceTime]="900"
-        (visible)="onVisible($event)"
-        (invisible)="onInVisible($event)">
-
+    <div class="card">
         <div class="card-side front">
-            <div class="front-content header-text-medium">MOBILE</div>
+            <div class="front-content header-text-medium" 
+                observeVisibility [debounceTime]="700" (visible)="onRotareCard($event)" (invisible)="onReturnCard($event)">MOBILE</div>
         </div>
         <div class="card-side back">
             <div class="card__image card__image--mobile"></div>
