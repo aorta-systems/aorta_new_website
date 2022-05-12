@@ -41,13 +41,14 @@ export class HeaderComponent implements OnInit {
   }
 
   preventDefault(event: Event) {
+    console.log('-----preventDefault------')
     event.preventDefault();
   }
   
 
   disableScroll() {
     window.addEventListener('wheel', this.preventDefault, { passive: false }); // modern desktop
-    window.addEventListener('touchmove', this.preventDefault, false); // mobile
+    window.addEventListener('touchmove', this.preventDefault, { passive: false }); // mobile
   }
 
   enableScroll() {

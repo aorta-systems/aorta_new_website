@@ -6,7 +6,8 @@ import { delay, filter, Subject } from 'rxjs';
 })
 export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewInit {
   @Input() debounceTime = 0;
-  @Input() threshold = 1;
+  @Input() delayTime = 0;
+  @Input() threshold = 1.0
   
   @Output() visible = new EventEmitter<HTMLElement>();
   @Output() invisible = new EventEmitter<HTMLElement>();
@@ -28,20 +29,19 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
   }
 
   ngOnDestroy() {
-    console.log('ngOnDestroy');
     if (this.observer) {
       this.observer.disconnect();
       this.observer = undefined;
     }
 
-    // this.subject$.next();
     this.subject$.complete();
   }
 
   private isVisible(element: HTMLElement) {
     return new Promise(resolve => {
       const observer = new IntersectionObserver(([entry]) => {
-        resolve(entry.intersectionRatio === 1);
+        // console.log('entry.intersectionRatio ',  entry.intersectionRatio)
+        resolve(entry.intersectionRatio >= this.threshold);
         observer.disconnect();
       });
 
@@ -60,6 +60,8 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
 
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
+        // console.log('entry.target')
+        // console.log(entry.target)
         if (isIntersecting(entry)) {
           this.subject$.next({ entry, observer });
         }
@@ -71,14 +73,17 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
     if (!this.observer) {
       return;
     }
-
+    // console.log('this.element');
+    // console.log(this.element.nativeElement)
     this.observer.observe(this.element.nativeElement);
 
     this.subject$
       .pipe(delay(this.debounceTime), filter(Boolean))
       .subscribe(async ({ entry, observer }) => {
+        // console.log(entry.target)
         const target = entry.target as HTMLElement;
         const isStillVisible = await this.isVisible(target);
+        // console.log(isStillVisible)
 
         if (isStillVisible) {
           this.visible.emit(target);

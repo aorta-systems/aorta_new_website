@@ -14,29 +14,15 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {}
 
   onVisible(element: HTMLElement) {
-    if (!element.classList.contains("active")) {
-      element.classList.add("active");
-    }
+    console.log(`Visible ${element}`);
+    element.classList.add("active");
   }
-
-  onRotareCard(element: HTMLElement) {
-    var card: HTMLElement = element.closest(".card") as HTMLElement;
-    card.classList.add("active");
-  }
-
-  onReturnCard(element: HTMLElement) {
-    var card: HTMLElement = element.closest(".card") as HTMLElement;
-    card.classList.remove("active");
-  }
-
-
 
   onInVisible(element: HTMLElement) {
     element.classList.remove("active");
   }
 
   handleClickContactUsBtn() {
-
     this.router.navigateByUrl('/contacts');
     // const dialogConfig = new MatDialogConfig();
 

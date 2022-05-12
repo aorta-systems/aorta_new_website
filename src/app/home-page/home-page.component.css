@@ -72,6 +72,7 @@
   right: 2em;
   left: 1em;
   position: absolute;
+  padding-top: 2em;
   top: 20%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -117,7 +118,7 @@
 
 @media screen and (max-width: 519px) {
   .header-text, .header-text-medium {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .content-text {
     font-size: 1rem;
@@ -331,11 +332,15 @@
   }
 } 
 @keyframes slideleft {
-  from {
+  0% {
+    opacity:0;
+    transform: translateX(0px);
+  }
+  1% {
      opacity:0;
      transform: translateX(100px);
   }
-  to {
+  100% {
      opacity:1;
      transform: translateX(0);
   }
