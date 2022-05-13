@@ -1,5 +1,5 @@
 import { AfterViewInit, OnInit, OnDestroy, Directive, EventEmitter, Input, Output, ElementRef } from '@angular/core';
-import { delay, filter, Subject } from 'rxjs';
+import { delay, debounceTime, filter, Subject } from 'rxjs';
 
 @Directive({
   selector: '[observeVisibility]'
@@ -20,6 +20,11 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
   private isNotVisible: Boolean = false;
   private timestamp: number = 0;
 
+  options = {
+    rootMargin: '0px',
+    threshold: this.threshold,
+  };
+
   constructor(private element: ElementRef) {}
 
   ngOnInit() {
@@ -39,6 +44,63 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
     this.subject$.complete();
   }
 
+
+  private startObservingElements() {
+    if (!this.observer) {
+      return;
+    }
+
+    this.observer.observe(this.element.nativeElement);
+
+    this.subject$
+      .pipe(
+        // tap((a) => console.log("tab:" + a)),
+        delay(200), 
+        debounceTime(this.debounceTime),
+        filter(({ entry, observer }) => {
+          return !!observer
+        })
+        
+        )
+      .subscribe(async ({ entry, observer }) => {
+        const target = entry.target as HTMLElement;
+        const isStillVisible = await this.isVisible(target);
+        // console.log('------target------')
+        // console.log(target)
+        // console.log(isStillVisible)
+        if (this.isNotVisible !== isStillVisible) {
+            // const passEnaughtTimeFromPreviosRun = this.timestamp == null || (Date.now()/1000 - this.timestamp/1000) > this.delayTime
+            // if (isStillVisible && passEnaughtTimeFromPreviosRun) {
+            //   this.visible.emit(target);
+            // }
+
+            if (isStillVisible) {
+              console.log('------visible------')
+              this.visible.emit(target);
+            }else {
+              console.log('------invisible------')
+              this.invisible.emit(target);
+            }
+          
+            
+            // else {
+            //   this.timestamp = Date.now() as number;
+            //   this.invisible.emit(target);
+            // }
+        }
+
+        this.isNotVisible = isStillVisible as Boolean;
+
+        // console.log(isStillVisible)
+
+      
+        // if (isStillVisible) {
+        //   this.visible.emit(target);
+        //   observer.unobserve(target);
+        // }
+      });
+  }
+
   private isVisible(element: HTMLElement) {
     return new Promise(resolve => {
       const observer = new IntersectionObserver(([entry]) => {
@@ -52,59 +114,30 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
   }
 
   private createObserver() {
-    const options = {
-      rootMargin: '0px',
-      threshold: this.threshold,
-    };
+    // const options = {
+    //   rootMargin: '0px',
+    //   threshold: this.threshold,
+    // };
 
-    const isIntersecting = (entry: IntersectionObserverEntry) =>
-      entry.isIntersecting || entry.intersectionRatio > 0;
+    // const isIntersecting = (entry: IntersectionObserverEntry) => entry.isIntersecting || entry.intersectionRatio > 0;
+
+
+
+    // this.observer = new IntersectionObserver((entries, observer) => {
+
+    // }, options);
 
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        // console.log('entry.target')
-        // console.log(entry.target)
-        if (isIntersecting(entry)) {
+        console.log('entry.target')
+        console.log(entry.target)
+        
+        if (entry.isIntersecting || entry.intersectionRatio > 0) {
+          // observer.unobserve(entry.target)
+
           this.subject$.next({ entry, observer });
         }
       });
-    }, options);
-  }
-
-  private startObservingElements() {
-    if (!this.observer) {
-      return;
-    }
-    // console.log('this.element');
-    // console.log(this.element.nativeElement)
-    this.observer.observe(this.element.nativeElement);
-
-    this.subject$
-      .pipe(delay(this.debounceTime), filter(Boolean))
-      .subscribe(async ({ entry, observer }) => {
-        // console.log(entry.target)
-        const target = entry.target as HTMLElement;
-        const isStillVisible = await this.isVisible(target);
-        
-        if (this.isNotVisible !== isStillVisible) {
-            const passEnaughtTimeFromPreviosRun = this.timestamp == null || (Date.now()/1000 - this.timestamp/1000) > this.delayTime
-            if (isStillVisible && passEnaughtTimeFromPreviosRun) {
-              this.visible.emit(target);
-            } else {
-              this.timestamp = Date.now() as number;
-              this.invisible.emit(target);
-            }
-        }
-
-        this.isNotVisible = isStillVisible as Boolean;
-
-        // console.log(isStillVisible)
-
-      
-        // if (isStillVisible) {
-        //   this.visible.emit(target);
-        //   observer.unobserve(target);
-        // }
-      });
+    }, this.options);
   }
 }
