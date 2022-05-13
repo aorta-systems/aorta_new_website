@@ -23,15 +23,6 @@ export class HomePageComponent implements OnInit {
 
   handleClickContactUsBtn() {
     this.router.navigateByUrl('/contacts');
-    // const dialogConfig = new MatDialogConfig();
-
-    // // dialogConfig.disableClose = true;
-    // dialogConfig.autoFocus = true;
-    // const dialogRef = this.dialog.open(ModalContactUsComponent, dialogConfig);
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
   }
 
 }
