@@ -54,7 +54,7 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
 
     this.subject$
       .pipe(
-        delay(100), 
+        delay(50), 
         debounceTime(this.debounceTime),
         filter(({ entry, observer }) => {
           return !!observer

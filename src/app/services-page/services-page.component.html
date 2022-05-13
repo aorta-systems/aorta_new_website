@@ -2,50 +2,33 @@
     <app-header></app-header>
 
 
-        <div class="header-text" style="  
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);">
-            SERVICES
-         </div>
 
+    <div class="service-page-header-content">
+        <div class="list-of-services header-text-medium">
+            <div class="header-service" (click)="moveToService('service1')">- Salesforce consulting services</div>
+            <div class="header-service" (click)="moveToService('service2')">- Salesforce technical implementation</div>
+            <div class="header-service" (click)="moveToService('service3')">- Salesforce custom development</div>
+            <div class="header-service" (click)="moveToService('service4')">- Salesforce integrations</div>
+            <div class="header-service" (click)="moveToService('service5')">- Salesforce automation & enhancements</div>
+            <div class="header-service" (click)="moveToService('service6')">- AppExchange product development</div>
+            <div class="header-service" (click)="moveToService('service7')">- Mobile App Development</div>
+            <div class="header-service" (click)="moveToService('service8')">- Web Development</div>
+        </div> 
 
-    <div class="list-of-services" style="padding-left: 2em; position: absolute; bottom: 2em; font-size: 1.6em;  line-height: 1.5em; font-weight: 300; color: rgb(230, 230, 230);">
-        <div class="header-service" (click)="moveToService('service1')">- Salesforce consulting services</div>
-        <div class="header-service" (click)="moveToService('service2')">- Salesforce technical implementation</div>
-        <div class="header-service" (click)="moveToService('service3')">- Salesforce custom development</div>
-        <div class="header-service" (click)="moveToService('service4')">- Salesforce integrations</div>
-        <div class="header-service" (click)="moveToService('service5')">- Salesforce automation & enhancements</div>
-        <div class="header-service" (click)="moveToService('service6')">- AppExchange product development</div>
-        <div class="header-service" (click)="moveToService('service7')">- Mobile App Development</div>
-        <div class="header-service" (click)="moveToService('service8')">- Web Development</div>
+        <div class="header-text header-text-animation">SERVICES</div>
     </div>
-
-
-<!-- 
-    <div class="header-section">
-        <div class="header-text header-text-animation">
-            OUR SERVICES
-         </div>
-    </div> -->
   </section>
   
 
-  <section class="content">
+ <section class="content">
       <div id="service1" class="service-card-container">
             <div class="service-card">
-            <div class="service-logo slideright"><img src="assets/images/servicepage/consultant.jpg"></div>
-                <div class="service-body slideleft">
-                    <div>
-                        <span class="service-header"
-                            observeVisibility
-                            [debounceTime]="200"
-                            (visible)="onVisible($event)"
-                            (invisible)="onInVisible($event)"
-                        >Salesforce consulting services</span>
+                <div class="service-logo slideright"><img src="assets/images/servicepage/consultant.jpg"></div>
+                <div class="slideleft">
+                    <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                        Salesforce consulting services
                     </div>
-                    <div>
+                    <div class="service-body-text">
                         We offer a full range of end-to-end Salesforce consulting services from building comprehensive 
                         Salesforce solution to managing implementation, customization, administration, automation, development, enhancement and integration.
                     </div>
@@ -56,17 +39,11 @@
     <div id="service2" class="service-card-container">
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/service1.jpg"></div>
-            <div class="service-body slideleft">
-
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >Salesforce technical implementation</span>
+            <div class="slideleft">
+                <div class="service-header" observeVisibility [debounceTime]="200"  (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Salesforce technical implementation
                 </div>
-                <div>
+                <div class="service-body-text">
                     Our Salesforce implementation services cover Salesforce consulting, 
                     review of your current sales & business processes, configuration, 
                     customization, data migration, integration, support, and more.
@@ -78,16 +55,11 @@
     <div id="service3" class="service-card-container">
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/development.jpg"></div>
-            <div class="service-body slideleft">
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >Salesforce custom development</span>
+            <div class="slideleft">
+                <div class="service-header"observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Salesforce custom development
                 </div>
-                <div>
+                <div class="service-body-text">
                     We are a skilled team of Salesforce experts and experienced certified developers 
                     who provide competitive Salesforce development services with a record of 100% client satisfaction.
                 </div>
@@ -98,18 +70,11 @@
     <div id="service4" class="service-card-container">   
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/integrations.jpg"></div>
-            <div class="service-body slideleft">
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >Salesforce integrations</span>
+            <div class="slideleft">
+                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Salesforce integrations
                 </div>
-
-
-                <div>
+                <div class="service-body-text">
                     Our company offers custom options that bring the essential components of your business together. 
                     Achieve unified business flow through our Salesforce backend, UI, API-based, data and systems integration services. 
                 </div>
@@ -120,18 +85,11 @@
     <div id="service5" class="service-card-container">  
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/automation.jpg"></div>
-            <div class="service-body slideleft">
-
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >Salesforce automation & enhancements</span>
+            <div class="slideleft">
+                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Salesforce automation & enhancements
                 </div>
-
-                <div>
+                <div class="service-body-text">
                     You can definitely rely on our team, who can help you to leverage 
                     Salesforce multiple tools to automate your organization's repetitive business processes:
                     Approvals, Process Builder, Workflow, and Flow Builder.
@@ -143,17 +101,11 @@
     <div  id="service6" class="service-card-container">  
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/productdevelopment.png"></div>
-            <div class="service-body slideleft">
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >AppExchange product development</span>
+            <div class="slideleft">
+                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    AppExchange product development
                 </div>
-
-                <div>
+                <div class="service-body-text">
                     We offer a development of AppExchange Force.com applications and managed packages, 
                     using tools backed by Lightning & Apex and managing security review process from beginning to end. 
                 </div>
@@ -164,17 +116,11 @@
     <div id="service7" class="service-card-container"> 
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/mobile.jpg"></div>
-            <div class="service-body slideleft">
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >Mobile app development</span>
+            <div class="slideleft">
+                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Mobile app development
                 </div>
-
-                <div>
+                <div class="service-body-text">
                     Reinforce your business with Mobile Solutions! We offer End-to-End Mobile App Development Services for iOS, Android and Cross-platform.
                 </div>
             </div>
@@ -184,20 +130,15 @@
     <div id="service8" class="service-card-container"> 
         <div class="service-card">
             <div class="service-logo slideright"><img src="assets/images/servicepage/webdevelopment.jpg"></div>
-            <div class="service-body slideleft">
-                <div>
-                    <span class="service-header"
-                        observeVisibility
-                        [debounceTime]="200"
-                        (visible)="onVisible($event)"
-                        (invisible)="onInVisible($event)"
-                    >Web development</span>
+            <div class="slideleft">
+                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Web development
                 </div>
-                <div>
+                <div class="service-body-text">
                     Make an impact with modern Web Development services designed to grow your business. 
                     We can turn your ideas into reality by building custom websites or web solutions from the ground up!
                 </div>
             </div>
         </div>
     </div>
-  </section>
+  </section> 

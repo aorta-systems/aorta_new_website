@@ -3,17 +3,12 @@
     font-size: 24px;
     font-weight: 400;
     font-family: inherit;
-    /* position: absolute;
-    top: 0px;
-    left: 0px;
-    max-width: 1170px;
-    width: 100%; */
 }
 header {
     display: flex;
     justify-content: center;
     height: 70px;
-    height: inherit;
+    max-height: 70px;
     max-width: 1170px;
     width: 100%;
     justify-content: space-between;
