@@ -5,7 +5,7 @@
     <app-header></app-header>
     <div>
         <div class="header-welcome-content">
-            <div class="header-welcome-text-section text-animation" observeVisibility [debounceTime]=200 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+            <div class="header-welcome-text-section text-animation" observeVisibility [debounceTime]=1000 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
                 <p class="header-text">
                     <span>All-</span>
                     <span>inclu</span>
@@ -36,11 +36,11 @@
 
 <section class="about-company-section content-text">   
     <div class="about-header slideleft text-align-middle header-text" style="grid-area: header;"
-         observeVisibility [debounceTime]=150 (visible)="onVisible($event)"(invisible)="onInVisible($event)">
+         observeVisibility [debounceTime]=700 (visible)="onVisible($event)"(invisible)="onInVisible($event)">
          ABOUT COMPANY
     </div>
         <div class="content slideright" style="grid-area: content; text-align: justify;"
-            observeVisibility [debounceTime]=150 [threshold]=0.7 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+            observeVisibility [debounceTime]=700 [threshold]=0.7 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
             development and various Salesforce consulting services from implementation, 
             customization and administration to automation, development, enhancements and 
@@ -49,7 +49,7 @@
             & business analysts, all of whom are constantly supported by our Salesforce Architects. 
         </div>
         <div class="content2 slideright" style="grid-area: content2; text-align: justify;"
-            observeVisibility  [debounceTime]=150 [threshold]=0.7 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+            observeVisibility  [debounceTime]=700 [threshold]=0.7 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
             development and PMBA centers are also located in San Francisco, Utah, Toronto, and 
             across Eastern Europe. The unique combination of the company’s multi-year CRM 
@@ -61,19 +61,19 @@
 
 
     <div class="info1 slidetop" style="grid-area: info1;"
-        observeVisibility [debounceTime]=50 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        observeVisibility [debounceTime]=700 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
         <p><img style="max-width: 100%;" src="assets/images/homepage/salesforce.svg"></p>
         <p>Salesforce ISV Partner</p>
     </div>
 
     <div class="info2 slidetop" style="grid-area: info2;"
-        observeVisibility [debounceTime]=100 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        observeVisibility [debounceTime]=1000 [threshold]=0.8 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
         <p><img style="max-width: 100%; max-height: 100%;" src="assets/images/homepage/salesforce.svg"></p>
         <p>Cloud Alliance Partner</p>
     </div>
 
     <div class="info1 slidetop" style="grid-area: info3; text-align: left; display: flex; flex-direction: column; justify-content: space-between;"
-        observeVisibility [debounceTime]=150 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
+        observeVisibility [debounceTime]=1300 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
         <p>100+ Team Members</p>
         <p>50+ Worldwide Customers</p>
         <p>25+ Salesforce Certifications</p>
@@ -92,7 +92,7 @@
              display: flex;
              justify-content: center;
              align-items: center">
-    <div class="slidetop header-text" observeVisibility [debounceTime]=200 (visible)="onVisible($event)"    (invisible)="onInVisible($event)">
+    <div class="slidetop header-text" observeVisibility [debounceTime]=700 (visible)="onVisible($event)"    (invisible)="onInVisible($event)">
         <div>OUR TECHNOLOGIES</div>
     </div>
     <div>
@@ -108,7 +108,7 @@
 </section>
 
 <section class="technologies-section">
-    <div class="card" observeVisibility [debounceTime]=200 [threshold]=0.6 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+    <div class="card" observeVisibility [debounceTime]=700 [threshold]=0.6 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
         <div class="card-side front">
             <div class="front-content header-text-medium">WEB</div>
         </div>
@@ -124,7 +124,7 @@
         </div>  
     </div>
 
-    <div class="card" observeVisibility [debounceTime]=300 [threshold]=0.6 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+    <div class="card" observeVisibility [debounceTime]=800 [threshold]=0.6 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
         <div class="card-side front">
             <div class="front-content header-text-medium">SALESFORCE</div>
         </div>
@@ -141,7 +141,7 @@
         </div>  
     </div>
 
-    <div class="card" observeVisibility [debounceTime]=400 [threshold]=0.6 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+    <div class="card" observeVisibility [debounceTime]=900 [threshold]=0.6 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
         <div class="card-side front">
             <div class="front-content header-text-medium">MOBILE</div>
         </div>

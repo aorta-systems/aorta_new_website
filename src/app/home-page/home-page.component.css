@@ -265,7 +265,7 @@
 }
 
 .slidetop.active {
-  animation: slidetop .5s ease forwards;
+  animation: slidetop .4s ease forwards;
 }
 .active .slideright, .slideright.active {
   animation: slideright .3s ease forwards;

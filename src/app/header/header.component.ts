@@ -41,7 +41,6 @@ export class HeaderComponent implements OnInit {
   }
 
   preventDefault(event: Event) {
-    console.log('-----preventDefault------')
     event.preventDefault();
   }
   
