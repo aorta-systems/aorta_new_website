@@ -89,9 +89,9 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
         if (this.isNotVisible !== isStillVisible) {
             const passEnaughtTimeFromPreviosRun = this.timestamp == null || (Date.now()/1000 - this.timestamp/1000) > this.delayTime
             if (isStillVisible && passEnaughtTimeFromPreviosRun) {
-              this.timestamp = Date.now() as number;
               this.visible.emit(target);
             } else {
+              this.timestamp = Date.now() as number;
               this.invisible.emit(target);
             }
         }
