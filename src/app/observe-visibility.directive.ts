@@ -18,6 +18,7 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
     observer: IntersectionObserver;
   }>();
   private isNotVisible: Boolean = false;
+  private timestamp: number = 0;
 
   constructor(private element: ElementRef) {}
 
@@ -86,11 +87,17 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
         const isStillVisible = await this.isVisible(target);
         
         if (this.isNotVisible !== isStillVisible) {
-          if (isStillVisible) {
-            this.visible.emit(target);
-          } else {
-            this.invisible.emit(target);
+          const passEnaughtTimeFromPreviosRun = this.timestamp == null || (Date.now()/1000 - this.timestamp/1000) > this.delayTime
+          if (passEnaughtTimeFromPreviosRun) {
+            this.timestamp = Date.now() as number;
+
+            if (isStillVisible) {
+              this.visible.emit(target);
+            } else {
+              this.invisible.emit(target);
+            }
           }
+
         }
 
         this.isNotVisible = isStillVisible as Boolean;
