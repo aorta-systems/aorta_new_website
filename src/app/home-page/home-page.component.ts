@@ -14,7 +14,6 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {}
 
   onVisible(element: HTMLElement) {
-    console.log(`Visible ${element}`);
     element.classList.add("active");
   }
 
