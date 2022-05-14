@@ -68,11 +68,13 @@
         <p class="text-align-middle">Cloud Alliance Partner</p>
     </div>
 
-    <div class="info1 slidetop" style="grid-area: info3; text-align: left; display: flex; flex-direction: column; justify-content: space-between;"
-        observeVisibility [debounceTime]=300 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
-        <p>100+ Team Members</p>
-        <p>50+ Worldwide Customers</p>
-        <p>25+ Salesforce Certifications</p>
+    <div class="info1" style="grid-area: info3; justify-self: center;">
+        <div class="slidetop" style=" display: flex; flex-direction: column; justify-content: space-between;" 
+            observeVisibility [debounceTime]=300 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+            <p>100+ Team Members</p>
+            <p>50+ Worldwide Customers</p>
+            <p>25+ Salesforce Certifications</p>
+        </div>
     </div>
 
     <div class="about-company-picture"></div>
