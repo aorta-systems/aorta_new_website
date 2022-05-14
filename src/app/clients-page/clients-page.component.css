@@ -12,9 +12,8 @@
 }
 
 .content {
-    padding: 2em;
     max-width: 1170px;
-    width: 100%;
+    width: 100vw;
     align-self: center;
 }
 
