@@ -16,3 +16,10 @@ footer {
     text-align: center;
     margin-top:auto; 
 }
+
+@media screen and (max-width: 519px) {
+    footer {
+        font-size: 0.75rem;
+        padding-top: 1em;
+    }
+}

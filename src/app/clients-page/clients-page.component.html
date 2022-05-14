@@ -1,18 +1,10 @@
 <section class="client-page-header">
     <app-header></app-header>
     <div class="header-section">
-        <div class="header-text header-text-animation"
-             observeVisibility
-             [debounceTime]="300"
-             (visible)="onVisible($event)"
-             (invisible)="onInVisible($event)">
+        <div class="header-text header-text-animation" observeVisibility [debounceTime]="500" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
              PARTNERS & CLIENTS
         </div>
-        <div class="under-header-text text-animation"
-             observeVisibility
-             [debounceTime]="300"
-             (visible)="onVisible($event)"
-             (invisible)="onInVisible($event)">
+        <div class="under-header-text text-animation" observeVisibility [debounceTime]="700" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             <span>This&nbsp;</span>
             <span>is&nbsp;</span>
             <span>only&nbsp;</span>
@@ -42,8 +34,7 @@
             </div>
             <div class="overlay">
                 <a [href]="client.url">
-                    <img [src]="client.src" 
-                         [style.animation]="client.animation">
+                    <img [src]="client.src" [style.animation]="client.animation">
                 </a>
             </div>
         </div>

@@ -21,11 +21,7 @@
       </div>
   </div>
 
-  <div class="social-medial-links"
-       observeVisibility
-       [debounceTime]="500"
-       (visible)="onVisible($event)"
-       (invisible)="onInVisible($event)">
+  <div class="social-medial-links" observeVisibility [debounceTime]="500" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
     <a href="https://www.facebook.com/AortaSystems" target="_blank">
       <img src="assets/images/social/facebook.png" height="50">
     </a>

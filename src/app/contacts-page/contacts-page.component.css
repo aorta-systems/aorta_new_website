@@ -1,4 +1,3 @@
-
 :host {
     display: flex;
     flex-flow: column;
@@ -15,12 +14,10 @@
     top: 50%;
     transform: translate(0, -50%);
     color: white;
-    width: 35%;
-    min-width: 450px;
     left: 2em;
 }
 .header-text {
-    font-weight: 500;
+    font-weight: 450;
     font-size: 2.8em;
     line-height: 2em;
     color: white;
@@ -103,6 +100,47 @@
 :host .mat-stroked-button {
     border-radius: 0px !important;
 }
+
+
+@media screen and (max-width: 519px) {
+    .header-text {
+        font-size: 1.8rem;
+    }
+    .under-header-text {
+        font-size: 1.1rem;
+    }
+    .social-medial-links {
+        font-size: 1.1rem;
+    }
+    .container {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+    .info {
+        font-size: 1.35rem;
+    }  
+}
+  
+  @media screen and (max-width: 767px) and (min-width: 520px) {
+    .header-text {
+      font-size: 2.2rem;
+    }
+    .under-header-text {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .header-text {
+      font-size: 2.5rem;
+    }
+    .under-header-text {
+        font-size: 1.1rem;
+    }
+  }
+
+
+
 @keyframes slideSocialLinks {
     0% {
        opacity:0;
