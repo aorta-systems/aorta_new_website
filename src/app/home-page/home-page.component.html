@@ -24,8 +24,11 @@
             </div>
         </div>
 
-        <div class="contact-us-btn" observeVisibility [debounceTime]=200 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-            <button mat-button (click)="handleClickContactUsBtn()" class="btn slideright">CONTACT US</button>
+        <div class="contact-us-btn">
+            <button mat-button (click)="handleClickContactUsBtn()" 
+                    class="btn slideright" observeVisibility [debounceTime]=200 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                CONTACT US
+            </button>
         </div>
     </div>
 </section>
