@@ -42,14 +42,7 @@
   background-size: cover; 
   min-height: calc(100vh);
 }
-.header-welcome-text-section {
-  color: #fff;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
+
 .header-text {
   word-break: break-word;
   line-height: 1.2em;
@@ -69,12 +62,19 @@
 .text-align-middle {
   text-align: center;
 }
+
+.header-welcome-text-section {
+  color: #fff;
+  opacity: 0;
+}
+
 .header-welcome-content {
   position: absolute;
+  width: 100%;
   padding: 1.5em;
   top: 20%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contact-us-btn {
