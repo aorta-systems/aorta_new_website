@@ -3,14 +3,15 @@
     <div>
         <div class="header-welcome-content">
             <div class="header-welcome-text-section text-animation" observeVisibility [debounceTime]=200 (visible)="onVisible($event)"  (invisible)="onInVisible($event)">
-                <p class="header-text">
+                <p class="header-text text-align-middle">
                     <span>All-</span>
-                    <span>inclu</span>
-                    <span>sive&nbsp;</span>
+                    <span>inc</span>
+                    <span>lu</span>
+                    <span>si</span>
+                    <span>ve&nbsp;</span>
                     <span>Sales</span>
                     <span>force&nbsp;</span>
-                    <span>serv</span>
-                    <span>ices</span> 
+                    <span>services</span>
                 </p>
                 <p class="content-text">
                     <span>Salesforce &nbsp;</span>
@@ -25,8 +26,7 @@
         </div>
 
         <div class="contact-us-btn">
-            <button mat-button (click)="handleClickContactUsBtn()" 
-                    class="btn slideright" observeVisibility [debounceTime]=200 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+            <button mat-button (click)="handleClickContactUsBtn()"  class="btn slideright" observeVisibility [debounceTime]=200 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
                 CONTACT US
             </button>
         </div>
@@ -38,7 +38,7 @@
          observeVisibility [debounceTime]=200 (visible)="onVisible($event)"(invisible)="onInVisible($event)">
          ABOUT COMPANY
     </div>
-        <div class="content slideright" style="grid-area: content; text-align: justify;"
+        <div class="content slideright" style="grid-area: content; text-align:justify; word-break: break-all;"
             observeVisibility [debounceTime]=200 [threshold]=0.7 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             Aorta Systems offers a full range of end-to-end Salesforce solutions, product 
             development and various Salesforce consulting services from implementation, 
@@ -47,7 +47,7 @@
             Salesforce.com consultants, developers, administrators, QA experts, project managers 
             & business analysts, all of whom are constantly supported by our Salesforce Architects. 
         </div>
-        <div class="content2 slideright" style="grid-area: content2; text-align: justify;"
+        <div class="content2 slideright" style="grid-area: content2; text-align:justify; word-break: break-all;"
             observeVisibility  [debounceTime]=200 [threshold]=0.7 (visible)="onVisible($event)" (invisible)="onInVisible($event)">
             Aorta Systems was launched in 2013. Headquartered in New York, the company’s 
             development and PMBA centers are also located in San Francisco, Utah, Toronto, and 

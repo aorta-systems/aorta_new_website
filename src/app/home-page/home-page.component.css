@@ -51,6 +51,7 @@
   opacity: 0;
 }
 .header-text {
+  word-break: break-word;
   line-height: 1.2em;
   font-size: 3.5rem;
   font-weight: 600;
@@ -69,10 +70,8 @@
   text-align: center;
 }
 .header-welcome-content {
-  right: 2em;
-  left: 1em;
   position: absolute;
-  padding-top: 2em;
+  padding: 1.5em;
   top: 20%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -80,13 +79,13 @@
 
 .contact-us-btn {
   position: absolute;
+  padding: 15px 0px 2em 30px;
   bottom: 4rem;
   left: 4rem;
 }
 .btn {
   font-size: 2.5rem;
   color: #fff;
-  padding: 15px 0px 2em 30px;
   opacity: 0;
   font-weight: 300;
   animation: slideright .5s ease-out forwards;
@@ -118,7 +117,7 @@
 
 @media screen and (max-width: 519px) {
   .header-text, .header-text-medium {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     line-height: 2rem;
   }
   .content-text {
@@ -243,6 +242,9 @@
 }
 .text-animation.active span:nth-child(7) {
   animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.text-animation.active span:nth-child(8) {
+  animation: fade-in 0.9s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @keyframes fade-in {
