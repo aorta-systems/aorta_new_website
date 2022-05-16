@@ -68,6 +68,16 @@
   opacity: 0;
 }
 
+.content {
+  text-align: justify;
+	text-justify: auto;
+  word-break: keep-all;
+}
+.content2 {
+  text-align: justify; 
+  word-break: keep-all;
+}
+
 .header-welcome-content {
   position: absolute;
   width: 100%;
