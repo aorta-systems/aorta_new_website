@@ -79,12 +79,13 @@
 }
 
 .header-welcome-content {
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   padding: 1.5em;
   top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  padding-top: 20%;
 }
 
 .contact-us-btn {
