@@ -21,121 +21,105 @@
  <section class="content">
       <div id="service1" class="service-card-container">
             <div class="service-card">
+                <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                    Salesforce consulting services
+                </div>
                 <div class="service-logo slideright"><img src="assets/images/servicepage/consultant.jpg"></div>
-                <div class="slideleft">
-                    <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                        Salesforce consulting services
-                    </div>
-                    <div class="service-body-text">
-                        We offer a full range of end-to-end Salesforce consulting services from building comprehensive 
-                        Salesforce solution to managing implementation, platform consulting, customization, administration, data automation, development, enhancement and integration.
-                    </div>
+                <div class="service-body-text slideleft">
+                    We offer a full range of end-to-end Salesforce consulting services from building comprehensive 
+                    Salesforce solution to managing implementation, platform consulting, customization, administration, data migration, system automation, development and integration.
                 </div>
             </div>
       </div>
 
     <div id="service2" class="service-card-container">
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                Salesforce technical implementation
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/service1.jpg"></div>
-            <div class="slideleft">
-                <div class="service-header" observeVisibility [debounceTime]="200"  (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    Salesforce technical implementation
-                </div>
-                <div class="service-body-text">
-                    Our Salesforce implementation services cover Salesforce consulting, 
-                    review of your current sales & business processes, configuration, 
-                    customization, system upgrade, data migration, integration, support, and more.
-                </div>
+            <div class="service-body-text slideleft">
+                Our Salesforce implementation services cover Salesforce consulting, 
+                review of your current sales & business processes, system configuration, 
+                customization, system upgrade, data migration, integration, support, and more.
             </div>
         </div>
     </div>
 
     <div id="service3" class="service-card-container">
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                Salesforce custom development
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/development.jpg"></div>
-            <div class="slideleft">
-                <div class="service-header"observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    Salesforce custom development
-                </div>
-                <div class="service-body-text">
-                    We are a skilled team of Salesforce experts and experienced certified developers 
-                    who provide competitive Salesforce development services with a record of 100% client satisfaction.
-                </div>
+            <div class="service-body-text slideleft">
+                We are a skilled team of Salesforce experts and experienced certified developers 
+                who provide competitive development services with a record of 100% client satisfaction.
             </div>
         </div>
     </div>
 
     <div id="service4" class="service-card-container">   
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                Salesforce integrations
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/integrations.jpg"></div>
-            <div class="slideleft">
-                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    Salesforce integrations
-                </div>
-                <div class="service-body-text">
-                    Our company offers custom options that bring the essential components of your business together. 
-                    Achieve unified business flow through our Salesforce backend, UI, API-based, data and systems integration services. 
-                </div>
+            <div class="service-body-text slideleft">
+                Our company offers custom options that bring the essential components of your business together. 
+                    Achieve unified business flow through our Salesforce backend, UI, API-based, data and systems integration services.
             </div>
         </div>
     </div>
 
     <div id="service5" class="service-card-container">  
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                Salesforce automation & enhancements
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/automation.jpg"></div>
-            <div class="slideleft">
-                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    Salesforce automation & enhancements
-                </div>
-                <div class="service-body-text">
-                    You can definitely rely on our team, who can help you to leverage 
-                    Salesforce multiple tools to automate your organization's repetitive business processes:
-                    Approvals, Process Builder, Workflow, and Flow Builder.
-                </div>
+            <div class="service-body-text slideleft">
+                You can definitely rely on our team, who can help you to leverage 
+                Salesforce multiple tools to automate your organization's repetitive business processes:
+                Approvals, Process Builder, Workflow, and Flow Builder.
             </div>
         </div>
     </div>
 
     <div  id="service6" class="service-card-container">  
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                AppExchange product development
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/productdevelopment.png"></div>
-            <div class="slideleft">
-                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    AppExchange product development
-                </div>
-                <div class="service-body-text">
-                    We offer a development of AppExchange Force.com applications and managed packages, 
-                    using tools backed by Lightning & Apex and managing security review process from beginning to end. 
-                </div>
+            <div class="service-body-text slideleft">
+                We offer a development of AppExchange Force.com applications and managed packages, 
+                using tools backed by Lightning & Apex and managing security review process from beginning to end. 
             </div>
         </div>
     </div>
 
     <div id="service7" class="service-card-container"> 
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                Mobile app development
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/mobile.jpg"></div>
-            <div class="slideleft">
-                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    Mobile app development
-                </div>
-                <div class="service-body-text">
-                    Reinforce your business with Mobile Solutions! We offer End-to-End Mobile App Development Services for iOS, Android and Cross-platform.
-                </div>
+            <div class="service-body-text slideleft">
+                Reinforce your business with Mobile Solutions! We offer End-to-End Mobile App Development Services for iOS, Android and Cross-platform.
             </div>
         </div>
     </div>
 
     <div id="service8" class="service-card-container"> 
         <div class="service-card">
+            <div class="service-header slideleft" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
+                Web development
+            </div>
             <div class="service-logo slideright"><img src="assets/images/servicepage/webdevelopment.jpg"></div>
-            <div class="slideleft">
-                <div class="service-header" observeVisibility [debounceTime]="200" (visible)="onVisible($event)" (invisible)="onInVisible($event)">
-                    Web development
-                </div>
-                <div class="service-body-text">
-                    Make an impact with modern Web Development services designed to grow your business. 
+            <div class="service-body-text slideleft">
+                Make an impact with modern Web Development services designed to grow your business. 
                     We can turn your ideas into reality by building custom websites or web solutions from the ground up!
-                </div>
             </div>
         </div>
     </div>

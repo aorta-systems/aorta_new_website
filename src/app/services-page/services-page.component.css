@@ -59,7 +59,6 @@
     font-weight: 400;
 }
 
-
 .content {
     max-width: 1170px;
     width: 100vw;
@@ -85,21 +84,29 @@
 .service-card {
     display: grid;
     grid-template-columns: 200px 1fr;
-    gap: 3em;
+    grid-template-rows: 3em auto;
+    grid-template-areas:
+    'img header'
+    'img content';
+    grid-column-gap: 3em;
+    /* grid-column-gap: 3em; */
 }
 .service-header {
+    grid-area: header;
     font-weight: 400;
     font-size: 1.5em;
     line-height: 1.2em;
-    padding-bottom: 0.5em;
+    /* padding-bottom: 0.5em; */
 }
 .service-body-text {
+    grid-area: content;
     text-align: justify;
     font-size: 1.4em;
     font-weight: 300;
-    line-height: 1.2em;
+    line-height: 1.35em;
 }
 .service-logo {
+    grid-area: img;
     align-self: center;
     justify-self: center;
 }
@@ -131,10 +138,17 @@
         /* min-width: 355px; */
     }
     .service-card {
+        grid-template-areas:
+        'header header'
+        'img content';
         grid-template-columns: 90px 1fr;
-        gap: 1em;
+        grid-template-rows: 2em auto;
+        grid-column-gap: 1em;
+        grid-row-gap: 0.5em;
+        /* gap: 1em; */
     }
     .service-header {
+        text-align: center;
         font-size: 1.2rem;
     }
     .service-body-text {
