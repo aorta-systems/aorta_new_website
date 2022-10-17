@@ -106,9 +106,9 @@ const CLIENTS = [
     srcMono  : "assets/images/clients/seismic-logoMono.png",
     url      : "https://seismic.com/"
   },{
-    src      : "assets/images/clients/semantria_logo.png",
-    srcMono  : "assets/images/clients/semantria_logoMono.png",
-    url      : "https://semantria.com/"
+    src      : "assets/images/clients/hasura_logo.png",
+    srcMono  : "assets/images/clients/hasura_mono_logo.png",
+    url      : "https://hasura.io/"
   },{
     src      : "assets/images/clients/shujinko_logo.png",
     srcMono  : "assets/images/clients/shujinko_logoMono.png",
