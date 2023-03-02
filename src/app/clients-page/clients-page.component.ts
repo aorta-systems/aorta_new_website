@@ -146,9 +146,9 @@ const CLIENTS = [
     srcMono  : "assets/images/clients/billforwardMono.png",
     url      : "https://www.billforward.net/"
   },{
-    src      : "assets/images/clients/creatio_logo.png",
-    srcMono  : "assets/images/clients/creatio_logoMono.png",
-    url      : "https://www.creatio.com/"
+    src      : "assets/images/clients/startree-logo.png",
+    srcMono  : "assets/images/clients/startree-logo-mono.png",
+    url      : "https://startree.ai/"
   },{
     src      : "assets/images/clients/cerebras-logo.png",
     srcMono  : "assets/images/clients/cerebras-logoMono.png",
@@ -156,7 +156,7 @@ const CLIENTS = [
   },{
     src      : "assets/images/clients/ceros_logo.jpg",
     srcMono  : "assets/images/clients/ceros_logoMono.png",
-    url      : "https://coreos.com/"
+    url      : "https://www.ceros.com/"
   },{
     src      : "assets/images/clients/brex_logo.png",
     srcMono  : "assets/images/clients/brex_logoMono.png",
