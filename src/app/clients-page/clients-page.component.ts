@@ -161,6 +161,10 @@ const CLIENTS = [
     src      : "assets/images/clients/brex_logo.png",
     srcMono  : "assets/images/clients/brex_logoMono.png",
     url      : "https://www.brex.com/"
+  },{
+    src      : "assets/images/clients/pipl-logo.png",
+    srcMono  : "assets/images/clients/pipl-logo-mono.png",
+    url      : "https://pipl.com/"
   }
 ]
 @Component({
