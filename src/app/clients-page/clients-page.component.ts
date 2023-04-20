@@ -78,10 +78,6 @@ const CLIENTS = [
     srcMono  : "assets/images/clients/pnp_logoMono.png",
     url      : "https://www.plugandplaytechcenter.com/"
   },{
-    src      : "assets/images/clients/people-ai.png",
-    srcMono  : "assets/images/clients/people-aiMono.png",
-    url      : "https://people.ai/"
-  },{
     src      : "assets/images/clients/redhat_logo.png",
     srcMono  : "assets/images/clients/redhat_logoMono.png",
     url      : "https://redhat.com/"
