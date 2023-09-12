@@ -90,6 +90,10 @@ const CLIENTS = [
     srcMono  : "assets/images/clients/room1Mono.png",
     url      : "https://room.com/"
   },{
+    src      : "assets/images/clients/ofs_logo.png",
+    srcMono  : "assets/images/clients/ofs_logo_mono.png",
+    url      : "https://ofs.com/"
+  },{
     src      : "assets/images/clients/salt_logo.png",
     srcMono  : "assets/images/clients/salt_logoMono.png",
     url      : "https://salt.security/"
@@ -150,17 +154,21 @@ const CLIENTS = [
     srcMono  : "assets/images/clients/cerebras-logoMono.png",
     url      : "https://www.cerebras.net/"
   },{
-    src      : "assets/images/clients/ceros_logo.jpg",
-    srcMono  : "assets/images/clients/ceros_logoMono.png",
-    url      : "https://www.ceros.com/"
-  },{
     src      : "assets/images/clients/brex_logo.png",
     srcMono  : "assets/images/clients/brex_logoMono.png",
     url      : "https://www.brex.com/"
   },{
+    src      : "assets/images/clients/ceros_logo.jpg",
+    srcMono  : "assets/images/clients/ceros_logoMono.png",
+    url      : "https://www.ceros.com/"
+  },{
     src      : "assets/images/clients/pipl-logo.png",
     srcMono  : "assets/images/clients/pipl-logo-mono.png",
     url      : "https://pipl.com/"
+  },{
+    src      : "assets/images/clients/aupair_logo.png",
+    srcMono  : "assets/images/clients/aupair_logo_mono.png",
+    url      : "https://www.goaupair.com/"
   }
 ]
 @Component({
