@@ -169,6 +169,10 @@ const CLIENTS = [
     src      : "assets/images/clients/aupair_logo.png",
     srcMono  : "assets/images/clients/aupair_logo_mono.png",
     url      : "https://www.goaupair.com/"
+  },{
+    src      : "assets/images/clients/schoox.png",
+    srcMono  : "assets/images/clients/schoox.png",
+    url      : "https://www.schoox.com/"
   }
 ]
 @Component({
